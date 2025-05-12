@@ -91,7 +91,7 @@ const Home = () => {
 
         {/* 2nd Section  */}
 
-        <section className="secondsection px-10 pt-10 md:pb-30">
+        <section className="secondsection px-4 pt-10 md:px-10 md:pb-30">
           <Copy>
             <h4>About us</h4>
             <h1 className="mt-4 w-full md:w-3/4">
@@ -217,7 +217,7 @@ const Home = () => {
             </Copy>
           </div>
         </div>
-        <section className="font-NHD relative flex h-[100svh] w-full overflow-hidden bg-black px-10 py-30 text-white">
+        <section className="font-NHD relative flex h-[100svh] w-full overflow-hidden bg-black px-4 py-30 text-white md:px-10">
           <div className="left w-1/2">
             <Copy delay={0.0}>
               <h4>About us</h4>
@@ -254,12 +254,12 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="relative flex w-full overflow-hidden px-10 pt-24 pb-24">
+        <section className="relative flex w-full overflow-hidden px-4 pt-24 pb-24 md:px-10">
           <div className="flex w-full flex-col gap-4 text-black">
             <Copy>
               <p className="text-lg text-orange-500">We're here to help.</p>
               <h2>Discover our team</h2>
-              <p className="mt-24 w-1/2 text-base">
+              <p className="mt-24 w-full text-base md:w-1/2">
                 COAN's professional employees play an integral role in
                 successfully delivering some of the largest and most complex
                 construction engineering projects in Africa.
