@@ -2,7 +2,7 @@
 import Button from "../components/Buttons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Ticker from "../components/Ticker";
+// import Ticker from "../components/Ticker";
 import ProfilesTicker from "../components/ProfilesTicker2";
 import FAQ from "../components/FAQ";
 import Counter from "../components/Counter2";
