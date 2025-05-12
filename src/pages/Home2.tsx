@@ -75,7 +75,7 @@ const Home = () => {
           />
           <div className="relative z-10 flex h-full items-center">
             <div className="flex w-full flex-col select-none">
-              <div className="logobig w-3/4 pb-6 md:w-1/2 md:pb-8">
+              <div className="logobig w-full pb-6 md:w-1/2 md:pb-8">
                 <img
                   src="./logo2.svg"
                   alt="Company Logo"
