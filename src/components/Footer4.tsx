@@ -73,7 +73,7 @@ const Footer = () => {
                 </Link>
               </div>
               <div>
-                <h5>ADRESS</h5>
+                <h5>ADDRESS</h5>
                 <p className="mt-2">
                   22 Durban Street, Wuse 2, Abuja. Nigeria.
                 </p>
@@ -99,7 +99,7 @@ const Footer = () => {
                 &copy; {new Date().getFullYear()} COAN West Africa Limited. All
                 Rights Reserved
               </p>
-              <p className="cursor-pointer hover:text-white">
+              <p className="hidden cursor-pointer hover:text-white md:block">
                 Terms & conditions
               </p>
               <p className="cursor-pointer hover:text-white">

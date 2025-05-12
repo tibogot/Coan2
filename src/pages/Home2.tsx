@@ -73,7 +73,7 @@ const Home = () => {
             className="bgimg2 absolute inset-0 z-0 scale-100 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/bgimg2.webp')" }}
           />
-          <div className="relative z-10 flex h-full items-center">
+          <div className="relative z-10 flex h-full items-end md:items-center">
             <div className="flex w-full flex-col select-none">
               <div className="logobig w-full pb-6 md:w-1/2 md:pb-8">
                 <img
@@ -202,7 +202,7 @@ const Home = () => {
 
         <div className="w-full flex-row bg-black py-20 text-white md:flex">
           <GridComponent />
-          <div className="flex w-full flex-col items-start justify-center p-20 md:w-1/2">
+          <div className="flex w-full flex-col items-start justify-center px-4 py-8 md:w-1/2 md:px-10">
             <Copy>
               <h2>
                 A construction <span className="text-orange-500">company,</span>
@@ -217,8 +217,8 @@ const Home = () => {
             </Copy>
           </div>
         </div>
-        <section className="font-NHD relative flex h-[100svh] w-full overflow-hidden bg-black px-4 py-30 text-white md:px-10">
-          <div className="left w-1/2">
+        <section className="font-NHD relative min-h-screen w-full overflow-hidden bg-black px-4 py-30 text-white md:flex md:px-10">
+          <div className="left md:w-1/2">
             <Copy delay={0.0}>
               <h4>About us</h4>
             </Copy>
@@ -292,7 +292,7 @@ const Home = () => {
             </div>
 
             {/* Text Container */}
-            <div className="absolute top-20 left-10 z-10 flex w-full justify-start px-10 text-white">
+            <div className="absolute top-20 z-10 flex w-full justify-start px-4 text-white md:px-10">
               <Copy>
                 <h1 className="">
                   Building the Future with Precision
