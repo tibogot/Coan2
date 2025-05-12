@@ -266,11 +266,11 @@ const Home = () => {
               </p>
             </Copy>
           </div>
-          <div className="flex w-full flex-col items-end justify-end gap-4 text-black">
+          {/* <div className="flex w-full flex-col items-end justify-end gap-4 text-black">
             <Button className="mt-10" variant="primary">
               Read More
             </Button>
-          </div>
+          </div> */}
         </section>
 
         <ProfilesTicker />

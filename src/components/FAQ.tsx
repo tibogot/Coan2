@@ -102,7 +102,7 @@ const FAQ = () => {
           <Copy>
             <p className="text-lg text-orange-500">We're here to help.</p>
 
-            <h2 className="mt-10 font-bold text-black">Got Questions?</h2>
+            <h2 className="mt-10 text-black">Got Questions?</h2>
           </Copy>
         </div>
 
