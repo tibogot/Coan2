@@ -13,7 +13,7 @@ const Footer = () => {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <div className="relative -top-[100vh] h-[calc(100vh+800px)]">
-        <footer className="sticky top-[calc(100vh-800px)] flex h-[800px] flex-col justify-between bg-[#0F0F0F] px-10 py-12 text-white">
+        <footer className="font-NHD sticky top-[calc(100vh-800px)] flex h-[800px] flex-col justify-between bg-[#0F0F0F] px-10 pt-12 pb-6 text-white">
           {/* Top Section */}
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-10 md:flex-row md:justify-between">
@@ -57,59 +57,6 @@ const Footer = () => {
 
             <hr className="border-gray-700" />
 
-            {/* <div className="flex flex-wrap justify-between gap-10 text-sm">
-              {[
-                {
-                  title: "Support",
-                  links: [
-                    "Contact us",
-                    "Delivery & returns",
-                    "FAQs",
-                    "Gift cards",
-                    "Klarna",
-                  ],
-                },
-                {
-                  title: "Services",
-                  links: [
-                    "Stores",
-                    "Appointments",
-                    "Ski workshop",
-                    "Demo",
-                    "Equipment hire",
-                  ],
-                },
-                {
-                  title: "About",
-                  links: [
-                    "About us",
-                    "Heritage",
-                    "Careers",
-                    "Affiliate programme",
-                  ],
-                },
-                {
-                  title: "Partners",
-                  links: [
-                    "The Snowboard Asylum",
-                    "Outsiders Store",
-                    "Our partners",
-                    "Charities we support",
-                  ],
-                },
-              ].map((section, idx) => (
-                <div key={idx} className="w-full sm:w-1/2 md:w-1/5">
-                  <h4 className="mb-4 font-semibold">{section.title}</h4>
-                  <ul className="space-y-2">
-                    {section.links.map((link, i) => (
-                      <li key={i}>
-                        <Link to="#">{link}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div> */}
             <div className="flex flex-wrap gap-10 text-sm">
               <div className="flex flex-col space-x-6">
                 <Link to="/" className="hover:text-orange-500">
