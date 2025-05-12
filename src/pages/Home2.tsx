@@ -200,9 +200,9 @@ const Home = () => {
 
         {/* <section className="font-NHD relative h-[100svh] w-full overflow-hidden bg-black"></section> */}
 
-        <div className="flex w-full bg-black py-20 text-white">
+        <div className="w-full flex-row bg-black py-20 text-white md:flex">
           <GridComponent />
-          <div className="flex w-1/2 flex-col items-start justify-center p-20">
+          <div className="flex w-full flex-col items-start justify-center p-20 md:w-1/2">
             <Copy>
               <h2>
                 A construction <span className="text-orange-500">company,</span>
