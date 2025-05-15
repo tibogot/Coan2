@@ -156,7 +156,7 @@ export default function HomeCard() {
   return (
     //@ts-ignore
     <div className="overflow-x-hidden" ref={container}>
-      <section className="hero relative h-screen w-full p-0">
+      <section className=" relative h-screen w-full p-0">
         <img src="./truck.png" alt="" className="h-full w-full object-cover" />
       </section>
 
