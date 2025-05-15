@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 
 export default function PulsingMap() {
   const [svgContent, setSvgContent] = useState<string | null>(null);

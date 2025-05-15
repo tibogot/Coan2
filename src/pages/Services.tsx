@@ -1,4 +1,3 @@
-import React from "react";
 import PulsingMap from "../components/MapSvg";
 
 const Services = () => {
