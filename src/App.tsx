@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LenisProvider } from "./components/LenisContext";
 import { ScrollToTop } from "./components/ScrollToTop";
-import Navbar from "./components/Navbar3";
+import Navbar from "./components/Navbar4";
 import Footer from "./components/Footer4";
 import Home from "./pages/Home2";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Gallery from "./pages/Gallery";
+import Gallery from "./pages/Gallery3";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/gallery" element={<Gallery />} />
+              <Route path="/services" element={<Services />} />
             </Routes>
           </main>
           <Footer />

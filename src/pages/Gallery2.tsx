@@ -68,29 +68,21 @@ const Gallery = () => {
   };
 
   return (
-    <div className="font-NHD maincontainer relative flex h-screen w-full flex-col px-4 py-10 md:px-10">
+    <div className="font-NHD maincontainer relative -mt-18 flex h-screen w-full flex-col px-4 py-20 md:px-10">
       {/* Categories Row */}
-      <div className="categories-row mb-8 flex w-full flex-wrap">
-        {[
-          "(Shadows)",
-          "(Light Exploration)",
-          "(Clay)",
-          "(Concrete Forms)",
-          "(Mixed Materials)",
-          "(Closeups)",
-        ].map((title, index) => (
-          <div key={index} className="category mb-4 w-1/6 px-2">
-            <h3 className="font-medium">{title}</h3>
-            <p className="text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-              nobis, possimus!
-            </p>
-          </div>
-        ))}
+      <div className="w-full">
+        {/* <h4>About us</h4> */}
+        <h1 className="mt-4 w-full md:w-3/4">
+          A construction <span className="text-orange-400">company,</span>
+          <br />
+          offering integrated solution and
+          <br />
+          related
+          <span className="text-orange-400"> services.</span>
+        </h1>
       </div>
-
       {/* Grid and Preview */}
-      <div className="flex h-full w-full flex-row select-none">
+      <div className="my-10 flex h-full w-full flex-row select-none">
         {/* Grid - Left */}
         <div className="gallery flex w-full flex-col lg:w-1/3">
           <div className="grid grid-cols-4 gap-4">
@@ -100,9 +92,9 @@ const Gallery = () => {
                 className="item mb-4 flex cursor-pointer flex-col items-center select-none"
                 onClick={() => handleImageClick(src)}
               >
-                <div className="index mb-1">
+                {/* <div className="index mb-1">
                   <p>{index + 1}</p>
-                </div>
+                </div> */}
                 <div className="img aspect-square w-full">
                   <img
                     className="h-full w-full object-cover"

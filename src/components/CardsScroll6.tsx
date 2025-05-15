@@ -12,8 +12,12 @@ function Card1() {
       <div className="card-inner relative w-full bg-purple-200 p-4 md:p-10">
         <div className="flex flex-col gap-8 md:flex-row md:gap-16">
           <div className="card-content flex-grow md:w-2/3">
-            <h1 className="mb-4 text-2xl font-bold">Inspiration Engine</h1>
+            <h1 className="mb-4 text-2xl">Construction</h1>
             <p>Ignite creativity with clarity, passion, and purpose.</p>
+            <p className="mt-4 w-1/2 text-2xl">
+              Innovative execution methods to deliver safe, high quality project
+              is the foundation of our business and success.
+            </p>
           </div>
           <div className="card-img aspect-video overflow-hidden rounded-xl md:w-1/3">
             <img
@@ -34,7 +38,7 @@ function Card2() {
       <div className="card-inner relative w-full bg-white p-4 md:p-10">
         <div className="flex flex-col gap-8 md:flex-row md:gap-16">
           <div className="card-content flex-grow md:w-2/3">
-            <h1 className="mb-4 text-2xl font-bold">Design Pulse</h1>
+            <h1 className="mb-4 text-2xl font-bold">Operation & Maintenance</h1>
             <p>Crafting digital elegance through visual storytelling.</p>
           </div>
           <div className="card-img aspect-video overflow-hidden rounded-xl md:w-1/3">
@@ -56,7 +60,7 @@ function Card3() {
       <div className="card-inner relative w-full bg-yellow-300 p-4 md:p-10">
         <div className="flex flex-col gap-8 md:flex-row md:gap-16">
           <div className="card-content flex-grow md:w-2/3">
-            <h1 className="mb-4 text-2xl font-bold">Presence Online</h1>
+            <h1 className="mb-4 text-2xl font-bold">Planning</h1>
             <p>Your story deserves a spotlight on every screen.</p>
           </div>
           <div className="card-img aspect-video overflow-hidden rounded-xl md:w-1/3">
@@ -78,7 +82,7 @@ function Card4() {
       <div className="card-inner relative w-full bg-gray-900 p-4 text-white md:p-10">
         <div className="flex flex-col gap-8 md:flex-row md:gap-16">
           <div className="card-content flex-grow md:w-2/3">
-            <h1 className="mb-4 text-2xl font-bold">Lasting Impressions</h1>
+            <h1 className="mb-4 text-2xl font-bold">Design</h1>
             <p>End strong, stay remembered, lead with impact.</p>
           </div>
           <div className="card-img aspect-video overflow-hidden rounded-xl md:w-1/3">

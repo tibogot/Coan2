@@ -10,6 +10,8 @@ import Copy from "../components/Copy1";
 import GridComponent from "../components/GridComponent2";
 import HomeCard from "../components/CardsScroll6";
 import { useGSAP } from "@gsap/react";
+// import CounterDark from "../components/CounterDark";
+import CautionTicker from "../components/CautionTicker";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -71,7 +73,7 @@ const Home = () => {
         <section className="hero relative -mt-18 h-[100svh] w-full overflow-hidden p-4 text-white md:p-10">
           <div
             className="bgimg2 absolute inset-0 z-0 scale-100 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/bgimg2.webp')" }}
+            style={{ backgroundImage: "url('/coan2bg.webp')" }}
           />
           <div className="relative z-10 flex h-full items-end md:items-center">
             <div className="flex w-full flex-col select-none">
@@ -107,31 +109,40 @@ const Home = () => {
             <div className="w-full md:w-1/2">
               <Copy>
                 <h3 className="w-full md:w-1/2">
-                  Over 18 years grinding alongside founders with a chip
+                  State-of-The-Art Construction Methods and Technologies
                 </h3>
               </Copy>
             </div>
             <Copy>
               <div className="mt-10 w-full md:w-1/2">
                 <p className="w-full text-lg md:w-3/4 md:text-xl">
-                  MIMCO est un groupe d'investissement spécialisé dans
-                  l'immobilier value add paneuropéen.
-                  <br />
-                  Le groupe structure et gère des véhicules d'investissement
-                  innovants au service d'une clientèle institutionnelle ainsi
-                  que de family offices et banques privées.
+                  COAN West Africa Limited is a construction company offering
+                  integrated solutions and related services. COAN is known for
+                  executing complex engineering solution that require the
+                  highest level of technical expertise be it
                   <br />
                   <br />
-                  Fort d'une expertise pointue en structuration financière,
-                  MIMCO déploie une gamme complète de solutions — de la création
-                  de fonds d'investissement réglementés aux club deals
-                  exclusifs, en passant par des produits sur mesure incluant
-                  notamment des solutions equity et dette mezzanine.
+                  Civil Engineering services - Bridge construction, Road and
+                  Drain construction, Dam construction, Public and Private
+                  building structures.
+                  <br />
+                  <br />
+                  Electrical Engineering services - Power supply infrastructure,
+                  Street lights installation, Telecommunication and ICT
+                  infrastructure.
+                  <br />
+                  <br />
+                  Mechanical Engineering services – Construction of Water supply
+                  network, Sewer and Sewage network.
                 </p>
               </div>
             </Copy>
           </div>
         </section>
+
+        <CautionTicker />
+
+        {/* <img src="banner.svg" alt="" /> */}
 
         <Counter />
 
@@ -217,42 +228,40 @@ const Home = () => {
             </Copy>
           </div>
         </div>
-        <section className="font-NHD relative min-h-screen w-full overflow-hidden bg-black px-4 py-30 text-white md:flex md:px-10">
-          <div className="left md:w-1/2">
-            <Copy delay={0.0}>
+        <section className="font-NHD relative min-h-screen w-full justify-between overflow-hidden bg-black px-4 py-10 text-white md:flex md:px-10">
+          <div className="left w-1/2">
+            {/* <Copy delay={0.0}>
               <h4>About us</h4>
-            </Copy>
+            </Copy> */}
+
+            {/* <Copy>
+              <h2 className="mt-4 w-full">
+                A construction company, offering integrated solution and related
+                services.
+              </h2>
+            </Copy> */}
 
             <Copy>
-              <h2 className="mt-4 w-3/4">
-                A construction company,
-                <br />
-                offering integrated solution and
-                <br />
-                related services.
-              </h2>
-            </Copy>
-            <Copy>
-              <p className="mt-10 w-7/8 text-xl">
+              <p className="mt-10 w-full pb-10 text-xl text-balance">
                 MIMCO est un groupe d'investissement spécialisé dans
                 l'immobilier value add paneuropéen.
                 <br />
                 Le groupe structure et gère des véhicules d'investissement
                 innovants au service d'une clientèle institutionnelle ainsi que
                 de family offices et banques privées.
-                <br />
               </p>
             </Copy>
           </div>
-          <div className="right flex w-1/2 justify-end select-none">
+          <div className="right flex w-1/2 pl-10 select-none">
             <img
               src="./bgimg2.webp"
               alt=""
-              className="sideimg1 h-[650px] w-[550px] object-cover"
+              className="sideimg1 w-full object-cover"
               // style={{ clipPath: "inset(0 0 100% 0)" }}
             />
           </div>
         </section>
+        {/* <CounterDark /> */}
 
         <section className="relative flex w-full overflow-hidden px-4 pt-24 pb-24 md:px-10">
           <div className="flex w-full flex-col gap-4 text-black">
