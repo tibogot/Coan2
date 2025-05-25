@@ -4,16 +4,23 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { UseLenis } from "./LenisContext";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const overlayRef = useRef(null);
-  const navRef = useRef(null);
-  const textRef = useRef(null);
+// Type for Lenis instance (you might need to adjust this based on your actual Lenis types)
+interface LenisInstance {
+  scrollTo: (
+    target: number | string | Element,
+    options?: { immediate?: boolean },
+  ) => void;
+}
+
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
-  const lenis = UseLenis();
+  const lenis = UseLenis() as LenisInstance | null;
 
   // Add hover color override via injected CSS
-  //@ts-ignore
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = `
@@ -23,10 +30,14 @@ const Navbar = () => {
       }
     `;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    return () => {
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
   }, []);
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     const overlay = overlayRef.current;
     if (!overlay) return;
 
@@ -37,63 +48,77 @@ const Navbar = () => {
     });
     setIsOpen(!isOpen);
   };
-  //@ts-ignore
 
-  const handleNavClick = (path) => {
+  const handleNavClick = (path: string): void => {
     if (location.pathname === path) {
       lenis?.scrollTo(0, { immediate: true });
     }
   };
 
   // Helper to set navbar styles
-  const setNavbarStyles = (isDark = true) => {
-    //@ts-ignore
+  const setNavbarStyles = (isDark: boolean = true): void => {
+    const navBg = navRef.current?.querySelector(
+      ".nav-bg",
+    ) as HTMLElement | null;
+    const links = textRef.current?.querySelectorAll(
+      "a > span, span",
+    ) as NodeListOf<HTMLElement>;
+    const menuBars = document.querySelectorAll(
+      ".menu-bar",
+    ) as NodeListOf<HTMLElement>;
 
-    const navBg = navRef.current?.querySelector(".nav-bg");
-    //@ts-ignore
+    if (navBg) {
+      gsap.to(navBg, {
+        scaleY: isDark ? 0 : 1,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+    }
 
-    const links = textRef.current?.querySelectorAll("a > span, span");
-    const menuBars = document.querySelectorAll(".menu-bar");
+    if (links.length > 0) {
+      gsap.to(links, {
+        color: isDark ? "#ffffff" : "#000000",
+        duration: 0.4,
+        ease: "power2.out",
+      });
+    }
 
-    gsap.to(navBg, {
-      scaleY: isDark ? 0 : 1,
-      duration: 0.6,
-      ease: "power3.out",
-    });
-
-    gsap.to(links, {
-      color: isDark ? "#ffffff" : "#000000",
-      duration: 0.4,
-      ease: "power2.out",
-    });
-
-    gsap.to(menuBars, {
-      backgroundColor: isDark ? "#ffffff" : "#000000",
-      duration: 0.4,
-      ease: "power2.out",
-    });
+    if (menuBars.length > 0) {
+      gsap.to(menuBars, {
+        backgroundColor: isDark ? "#ffffff" : "#000000",
+        duration: 0.4,
+        ease: "power2.out",
+      });
+    }
   };
 
   // Set initial state with GSAP
   useGSAP(() => {
-    gsap.set(overlayRef.current, { xPercent: -100 });
+    if (overlayRef.current) {
+      gsap.set(overlayRef.current, { xPercent: -100 });
+    }
 
-    //@ts-ignore
-    const navBg = navRef.current?.querySelector(".nav-bg");
-    const heroSection = document.querySelector(".hero");
+    const navBg = navRef.current?.querySelector(
+      ".nav-bg",
+    ) as HTMLElement | null;
+    const heroSection = document.querySelector(".hero") as HTMLElement | null;
 
     if (!heroSection || !isElementInViewport(heroSection)) {
-      gsap.set(navBg, { scaleY: 1 });
+      if (navBg) {
+        gsap.set(navBg, { scaleY: 1 });
+      }
       setNavbarStyles(false); // black text
     } else {
-      gsap.set(navBg, { scaleY: 0 });
+      if (navBg) {
+        gsap.set(navBg, { scaleY: 0 });
+      }
       setNavbarStyles(true); // white text
     }
   }, []);
 
   // Intersection observer for hero section
   useEffect(() => {
-    const heroSection = document.querySelector(".hero");
+    const heroSection = document.querySelector(".hero") as HTMLElement | null;
     if (!navRef.current || !textRef.current) return;
 
     if (!heroSection) {
@@ -102,7 +127,7 @@ const Navbar = () => {
     }
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry]: IntersectionObserverEntry[]) => {
         setNavbarStyles(entry.isIntersecting);
       },
       { threshold: 0.1 },
@@ -112,11 +137,19 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, [location.pathname]);
 
-  //@ts-ignore
-  const isElementInViewport = (el) => {
+  const isElementInViewport = (el: HTMLElement): boolean => {
     const rect = el.getBoundingClientRect();
     return rect.top <= 0 && rect.bottom >= 0;
   };
+
+  const navItems = ["Home", "About", "Services", "Gallery"] as const;
+  const mobileNavItems = [
+    "Home",
+    "About",
+    "Services",
+    "Gallery",
+    "Contact",
+  ] as const;
 
   return (
     <>
@@ -144,7 +177,7 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden items-center space-x-6 md:flex">
             <div className="flex space-x-6 text-base">
-              {["Home", "About", "Services", "Gallery"].map((text) => (
+              {navItems.map((text) => (
                 <Link
                   key={text}
                   to={`/${text.toLowerCase() === "home" ? "" : text.toLowerCase()}`}
@@ -201,7 +234,7 @@ const Navbar = () => {
       >
         <div className="w-1/2 bg-white px-20 py-32">
           <div className="flex flex-col space-y-8 text-3xl">
-            {["Home", "About", "Services", "Gallery", "Contact"].map((text) => (
+            {mobileNavItems.map((text) => (
               <Link
                 key={text}
                 to={`/${text.toLowerCase() === "home" ? "" : text.toLowerCase()}`}

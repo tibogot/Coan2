@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import Copy from "./Copy1";
-import Counter from "./Counter2";
+// import Counter from "./Counter2";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 

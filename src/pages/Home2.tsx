@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import Ticker from "../components/Ticker";
 import ProfilesTicker from "../components/ProfilesTicker2";
 import FAQ from "../components/FAQ";
-import Counter from "../components/Counter2";
+// import Counter from "../components/Counter2";
 import Copy from "../components/Copy1";
 import GridComponent from "../components/GridComponent2";
 import HomeCard from "../components/CardsScroll10";
