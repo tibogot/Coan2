@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LenisProvider } from "./components/LenisContext";
 import { ScrollToTop } from "./components/ScrollToTop";
-import Navbar from "./components/Navbar5";
+import Navbar from "./components/Navbar6";
 import Footer from "./components/Footer4";
 import Home from "./pages/Home2";
-import About from "./pages/About";
+import About from "./pages/About2";
 import Contact from "./pages/Contact";
-import Gallery from "./pages/Gallery3";
+import Gallery from "./pages/Gallery4";
 import Services from "./pages/Services";
 
 function App() {
