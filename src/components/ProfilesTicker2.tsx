@@ -315,7 +315,7 @@ const ProfilesTicker = () => {
               className="profile-card relative m-4 flex h-[400px] w-[300] flex-col md:h-[600px] md:w-[450px]"
             >
               {/* Country Tags */}
-              <div className="absolute top-4 left-4 flex space-x-2">
+              {/* <div className="absolute top-4 left-4 flex space-x-2">
                 {profile.countries.map((country, i) => (
                   <span
                     key={i}
@@ -324,7 +324,7 @@ const ProfilesTicker = () => {
                     {country}
                   </span>
                 ))}
-              </div>
+              </div> */}
 
               {/* Profile Image */}
               <img
@@ -335,7 +335,7 @@ const ProfilesTicker = () => {
 
               {/* Name & Title */}
               <div className="flex flex-col justify-between p-4">
-                <h3 className="text-xl font-medium">{profile.name}</h3>
+                <h3 className="">{profile.name}</h3>
                 <p className="mt-1 text-sm text-gray-500">{profile.title}</p>
               </div>
             </div>
@@ -348,7 +348,7 @@ const ProfilesTicker = () => {
               className="profile-card relative m-4 flex h-[400px] w-[300] flex-col md:h-[600px] md:w-[450px]"
             >
               {/* Country Tags */}
-              <div className="absolute top-4 left-4 flex space-x-2">
+              {/* <div className="absolute top-4 left-4 flex space-x-2">
                 {profile.countries.map((country, i) => (
                   <span
                     key={i}
@@ -357,7 +357,7 @@ const ProfilesTicker = () => {
                     {country}
                   </span>
                 ))}
-              </div>
+              </div> */}
 
               {/* Profile Image */}
               <img
@@ -368,7 +368,7 @@ const ProfilesTicker = () => {
 
               {/* Name & Title */}
               <div className="flex flex-col justify-between p-4">
-                <h3 className="text-xl font-medium">{profile.name}</h3>
+                <h3 className="">{profile.name}</h3>
                 <p className="mt-1 text-sm text-gray-500">{profile.title}</p>
               </div>
             </div>

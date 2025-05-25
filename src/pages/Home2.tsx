@@ -11,7 +11,7 @@ import GridComponent from "../components/GridComponent2";
 import HomeCard from "../components/CardsScroll10";
 import { useGSAP } from "@gsap/react";
 // import CounterDark from "../components/CounterDark";
-import CautionTicker from "../components/CautionTicker";
+// import CautionTicker from "../components/CautionTicker";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -109,7 +109,7 @@ const Home = () => {
 
         {/* 2nd Section  */}
 
-        <section className="secondsection px-4 pt-10 md:px-10 md:pb-30">
+        <section className="secondsection px-4 py-10 md:px-10 md:pb-30">
           <Copy>
             <h4 className="text-orange-400">About us</h4>
             <h1 className="mt-4 w-full md:w-3/4">
@@ -137,7 +137,6 @@ const Home = () => {
                   executing complex engineering solution that require the
                   highest level of technical expertise be it
                   <br />
-                  <br />
                   Civil Engineering services - Bridge construction, Road and
                   Drain construction, Dam construction, Public and Private
                   building structures.
@@ -158,7 +157,7 @@ const Home = () => {
 
         {/* <Counter /> */}
 
-        <CautionTicker />
+        {/* <CautionTicker /> */}
 
         {/* <img src="banner.svg" alt="" /> */}
 
@@ -213,7 +212,7 @@ const Home = () => {
                 alt="Section 3"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/10 px-4 text-center text-white">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 px-4 text-center text-white">
                 <h2>
                   Building the <span className="text-orange-400">future</span>
                   <br /> together
@@ -271,53 +270,44 @@ const Home = () => {
 
         {/* <section className="font-NHD relative h-[100svh] w-full overflow-hidden bg-black"></section> */}
 
+        {/* Black Section   */}
+
         <div className="w-full flex-row bg-black py-20 text-white md:flex">
           <GridComponent />
-          <div className="flex w-full flex-col items-start justify-center px-4 py-8 md:w-1/2 md:px-10">
+          <div className="flex w-full flex-col items-start justify-start px-4 py-4 md:w-1/2 md:px-10">
             <Copy>
-              <h2>
+              <h4 className="">Leading the way</h4>
+              <h2 className="mt-4">
                 A construction <span className="text-orange-400">company,</span>
                 <br /> offering integrated{" "}
                 <span className="text-orange-400">solution</span> and related
                 services.
               </h2>{" "}
               <p className="mt-10 w-1/2 text-base">
-                COAN's professional employees play an integral role in
-                successfully delivering.
+                MIMCO est un groupe d’investissement spécialisé dans
+                l'immobilier value add paneuropéen. Le groupe structure et gère
+                des véhicules d’investissement innovants au service d’une
+                clientèle institutionnelle ainsi que de family offices et
+                banques privées.
               </p>
             </Copy>
           </div>
         </div>
-        <section className="font-NHD relative min-h-screen w-full justify-between overflow-hidden bg-black px-4 py-10 text-white md:flex md:px-10">
-          <div className="left w-1/2">
-            <Copy delay={0.0}>
-              <h4>About us</h4>
-            </Copy>
-
-            <Copy>
-              <h2 className="mt-4 w-full">
-                A construction company, offering integrated solution and related
-                services.
-              </h2>
-            </Copy>
-
-            <Copy>
-              <p className="mt-10 w-full pb-10 text-xl text-balance">
-                MIMCO est un groupe d'investissement spécialisé dans
-                l'immobilier value add paneuropéen.
-                <br />
-                Le groupe structure et gère des véhicules d'investissement
-                innovants au service d'une clientèle institutionnelle ainsi que
-                de family offices et banques privées.
-              </p>
-            </Copy>
+        <section className="font-NHD relative min-h-screen w-full overflow-hidden bg-black px-4 py-10 text-white md:flex md:px-10">
+          <div className="left w-3/4">
+            <h2 className="w-3/4">
+              Over 18 years grinding alongside founders with a chip.
+            </h2>
           </div>
-          <div className="right flex w-1/2 pl-10 select-none">
-            <img
-              src="./bgimg2.webp"
-              alt=""
-              className="sideimg1 w-full object-cover"
-            />
+          <div className="right w-1/2">
+            <p className="w-3/4 pb-10 text-xl text-balance">
+              MIMCO est un groupe d'investissement spécialisé dans l'immobilier
+              value add paneuropéen.
+              <br />
+              Le groupe structure et gère des véhicules d'investissement
+              innovants au service d'une clientèle institutionnelle ainsi que de
+              family offices et banques privées.
+            </p>
           </div>
         </section>
         {/* <CounterDark /> */}

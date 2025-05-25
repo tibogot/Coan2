@@ -3,14 +3,15 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { UseLenis } from "./LenisContext";
+import Copy from "../components/Copy1";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 // Mock Copy component
 //@ts-ignore
-function Copy({ children }) {
-  return <div>{children}</div>;
-}
+// function Copy({ children }) {
+//   return <div>{children}</div>;
+// }
 
 function Card1() {
   return (
@@ -250,26 +251,21 @@ export default function HomeCard() {
   return (
     //@ts-ignore
     <div className="overflow-x-hidden" ref={container}>
-      <section className="intro px-4 pt-10 md:px-10 md:pb-30">
-        <Copy>
+      <section className="intro flex min-h-[50vh] px-4 pt-10 md:px-10 md:pb-30">
+        <div className="left w-3/4">
           <h4 className="text-orange-400">About us</h4>
-          <h1 className="mt-4 w-full md:w-3/4">
-            A construction <span className="text-orange-400">company,</span>
+          <h1 className="mt-4 w-full">
+            A construction company,
             <br />
             offering integrated solution and
-            <br />
-            related
-            <span className="text-orange-400"> services.</span>
           </h1>
-        </Copy>
-        <div className="mt-30 flex-row md:flex">
-          <div className="w-full md:w-1/2">
-            <Copy>
-              <h3 className="w-full md:w-1/2">
-                State-of-The-Art Construction Methods and Technologies
-              </h3>
-            </Copy>
-          </div>
+        </div>
+        <div className="right w-1/2">
+          <p className="mt-14 w-1/2">
+            MIMCO est un groupe d’investissement spécialisé dans l'immobilier
+            value add paneuropéen. Le groupe structure et gère des véhicules
+            d’investissement{" "}
+          </p>
         </div>
       </section>
 
@@ -280,7 +276,7 @@ export default function HomeCard() {
         <Card4 />
       </section>
 
-      <section className="outro relative flex h-screen w-full items-center justify-center bg-red-300 p-4 md:p-10">
+      <section className="outro relative flex h-screen w-full items-center justify-center p-4 md:p-10">
         {/* <div className="absolute top-0 left-0 h-full w-full bg-[url(/bg-hero.jpg)]"></div> */}
         <Copy>
           <h1 className="max-w-4xl text-center text-3xl font-bold">
