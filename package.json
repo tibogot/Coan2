@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@phosphor-icons/react": "^2.1.7",
+    "@phosphor-icons/react": "^2.1.10",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.0.17",
     "gsap": "^3.13.0",

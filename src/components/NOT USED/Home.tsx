@@ -1,14 +1,14 @@
 // import { useEffect } from "react";
-import Button from "../components/Buttons";
+import Button from "../Buttons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Ticker from "../components/Ticker";
-import ProfilesTicker from "../components/ProfilesTicker2";
-import FAQ from "../components/FAQ";
-import Counter from "../components/Counter2";
-import Copy from "../components/Copy1";
-import GridComponent from "../components/GridComponent2";
-import HomeCard from "../components/CardsScroll5";
+import Ticker from "../Ticker";
+import ProfilesTicker from "../ProfilesTicker2";
+import FAQ from "../FAQ";
+import Counter from "../Counter2";
+import Copy from "../Copy1";
+import GridComponent from "../GridComponent2";
+import HomeCard from "../CardsScroll5";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);

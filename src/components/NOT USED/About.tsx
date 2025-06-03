@@ -1,5 +1,5 @@
 // import HomeCard from "../components/CardsScroll3";
-import SecondSection from "../components/SecondSection2";
+import SecondSection from "../SecondSection2";
 
 const About = () => {
   return (

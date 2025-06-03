@@ -1,5 +1,5 @@
 // import { useEffect } from "react";
-// import Button from "../components/Buttons";
+import Button from "../components/Buttons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import Ticker from "../components/Ticker";
@@ -8,7 +8,7 @@ import FAQ from "../components/FAQ";
 // import Counter from "../components/Counter2";
 import Copy from "../components/Copy1";
 import GridComponent from "../components/GridComponent2";
-import HomeCard from "../components/CardsScroll10";
+import HomeCard from "../components/CardsScroll11";
 import { useGSAP } from "@gsap/react";
 // import CounterDark from "../components/CounterDark";
 // import CautionTicker from "../components/CautionTicker";
@@ -26,6 +26,16 @@ const Home = () => {
         scrub: true,
         pin: true,
         anticipatePin: 1,
+      },
+    });
+    gsap.to(".bgimg2", {
+      yPercent: 20, // adjust this for stronger/weaker parallax
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top", // when .hero hits bottom of viewport
+        end: "bottom top", // when .hero leaves top of viewport
+        scrub: true,
       },
     });
 
@@ -150,6 +160,10 @@ const Home = () => {
                   Mechanical Engineering services – Construction of Water supply
                   network, Sewer and Sewage network.
                 </p>
+
+                <Button className="mt-10" variant="withArrow">
+                  Learn more
+                </Button>
               </div>
             </Copy>
           </div>
@@ -295,19 +309,23 @@ const Home = () => {
         </div>
         <section className="font-NHD relative min-h-screen w-full overflow-hidden bg-black px-4 py-10 text-white md:flex md:px-10">
           <div className="left w-3/4">
-            <h2 className="w-3/4">
-              Over 18 years grinding alongside founders with a chip.
-            </h2>
+            <Copy>
+              <h2 className="w-3/4">
+                Over 18 years grinding alongside founders with a chip.
+              </h2>
+            </Copy>
           </div>
           <div className="right w-1/2">
-            <p className="w-3/4 pb-10 text-xl text-balance">
-              MIMCO est un groupe d'investissement spécialisé dans l'immobilier
-              value add paneuropéen.
-              <br />
-              Le groupe structure et gère des véhicules d'investissement
-              innovants au service d'une clientèle institutionnelle ainsi que de
-              family offices et banques privées.
-            </p>
+            <Copy>
+              <p className="w-3/4 pb-10 text-xl text-balance">
+                MIMCO est un groupe d'investissement spécialisé dans
+                l'immobilier value add paneuropéen.
+                <br />
+                Le groupe structure et gère des véhicules d'investissement
+                innovants au service d'une clientèle institutionnelle ainsi que
+                de family offices et banques privées.
+              </p>
+            </Copy>
           </div>
         </section>
         {/* <CounterDark /> */}

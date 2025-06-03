@@ -16,23 +16,29 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function Card1() {
   return (
     <div className="card relative w-full" id="card-1">
-      <div className="card-inner relative flex min-h-[400px] w-full bg-gray-200 p-4 md:p-10">
-        <div className="left flex w-1/2 flex-col justify-between">
-          <h2>Planning</h2>
-          <p className="w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
+      <div className="card-inner relative flex h-[400px] w-full bg-gray-200 p-4 md:p-10">
+        <div className="left flex w-3/4 flex-col justify-between">
+          <h6>Planning</h6>
+          <div className="p">
+            <p className="w-1/3">
+              Creating an ordered timeline of events, staffing the project and
+              determining the necessary materials and equipments.
+            </p>
+            <br />
+            <p className="w-1/3">
+              Creating an ordered timeline of events, staffing the project and
+              determining the necessary materials and equipments.
+            </p>
+          </div>
         </div>
-        <div className="right mt-2 w-1/2">
-          <p className="w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
-          <p className="mt-16 w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
+        <div className="right flex w-1/4 bg-amber-200">
+          <div className="img-wrap h-full w-full rounded-sm">
+            <img
+              src="coan2bg.webp"
+              alt="Planning visual"
+              className="h-full w-full rounded-sm object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -42,25 +48,31 @@ function Card1() {
 function Card2() {
   return (
     <div className="card relative w-full" id="card-2">
-      <div className="card-inner relative flex min-h-[400px] w-full bg-black p-4 text-white md:p-10">
-        <div className="left flex w-1/2 flex-col justify-between">
-          <h2>Construction</h2>
-          <p className="w-1/2">
-            Innovative execution methods to deliver safe, high quality project
-            is the foundation of our business and success.
-          </p>
+      <div className="card-inner relative flex h-[400px] w-full bg-black p-4 text-white md:p-10">
+        <div className="left flex w-3/4 flex-col justify-between">
+          <h6>Design</h6>
+          <div className="p">
+            <p className="w-1/3">
+              Creating an ordered timeline of events, staffing the project and
+              determining the necessary materials and equipments.
+            </p>
+            <br />
+            <p className="w-1/3">
+              Creating an ordered timeline of events, staffing the project and
+              determining the necessary materials and equipments.
+            </p>
+          </div>
         </div>
-        <div className="right mt-2 w-1/2">
-          <p className="w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
-          <p className="mt-16 w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
+        <div className="right flex w-1/4">
+          <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
+            <img
+              src="https://picsum.photos/200/300"
+              alt="Planning visual"
+              className="h-full w-full rounded-sm object-cover"
+            />
+          </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 }
@@ -68,23 +80,29 @@ function Card2() {
 function Card3() {
   return (
     <div className="card relative w-full" id="card-3">
-      <div className="card-inner relative flex min-h-[400px] w-full bg-orange-400 p-4 text-white md:p-10">
-        <div className="left flex w-1/2 flex-col justify-between">
+      <div className="card-inner relative flex h-[400px] w-full bg-orange-400 p-4 text-white md:p-10">
+        <div className="left flex w-3/4 flex-col justify-between">
           <h2>Operation & Maintenance</h2>
-          <p className="w-1/2">
-            Innovative execution methods to deliver safe, high quality project
-            is the foundation of our business and success.
-          </p>
+          <div className="p">
+            <p className="w-1/3">
+              Creating an ordered timeline of events, staffing the project and
+              determining the necessary materials and equipments.
+            </p>
+            <br />
+            <p className="w-1/3">
+              Creating an ordered timeline of events, staffing the project and
+              determining the necessary materials and equipments.
+            </p>
+          </div>
         </div>
-        <div className="right mt-2 w-1/2">
-          <p className="w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
-          <p className="mt-16 w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
+        <div className="right flex w-1/4">
+          <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
+            <img
+              src="https://picsum.photos/200/300"
+              alt="Planning visual"
+              className="h-full w-full rounded-sm object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -94,23 +112,29 @@ function Card3() {
 function Card4() {
   return (
     <div className="card relative w-full" id="card-4">
-      <div className="card-inner relative flex min-h-[400px] w-full bg-orange-500 p-4 text-white md:p-10">
-        <div className="left flex w-1/2 flex-col justify-between">
-          <h2>Sewage network installation</h2>
-          <p className="w-1/2">
-            Innovative execution methods to deliver safe, high quality project
-            is the foundation of our business and success.
-          </p>
+      <div className="card-inner relative flex h-[400px] w-full bg-orange-500 p-4 text-white md:p-10">
+        <div className="left flex w-3/4 flex-col justify-between">
+          <h2>Construction</h2>
+          <div className="p">
+            <p className="w-1/3">
+              Creating an ordered timeline of events, staffing the project and
+              determining the necessary materials and equipments.
+            </p>
+            <br />
+            <p className="w-1/3">
+              Creating an ordered timeline of events, staffing the project and
+              determining the necessary materials and equipments.
+            </p>
+          </div>
         </div>
-        <div className="right mt-2 w-1/2">
-          <p className="w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
-          <p className="mt-16 w-1/2">
-            Creating an ordered timeline of events, staffing the project and
-            determining the necessary materials and equipments.
-          </p>
+        <div className="right flex w-1/4">
+          <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
+            <img
+              src="https://picsum.photos/200/300"
+              alt="Planning visual"
+              className="h-full w-full rounded-sm object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -264,7 +288,7 @@ export default function HomeCard() {
         </div>
         <div className="right w-1/2">
           <Copy>
-            <p className="mt-14 w-1/2">
+            <p className="mt-14 w-1/2 text-lg md:text-xl">
               MIMCO est un groupe d’investissement spécialisé dans l'immobilier
               value add paneuropéen. Le groupe structure et gère des véhicules
               d’investissement{" "}
@@ -280,14 +304,43 @@ export default function HomeCard() {
         <Card4 />
       </section>
 
-      <section className="outro relative flex h-screen w-full items-center justify-center p-4 md:p-10">
-        {/* <div className="absolute top-0 left-0 h-full w-full bg-[url(/bg-hero.jpg)]"></div> */}
-        <Copy>
-          <h1 className="max-w-4xl text-center text-3xl font-bold">
-            Creating standout brands for startups that bring joy and leave
-            lasting impressions.
-          </h1>
-        </Copy>
+      <section className="outro min-h-[50vh] px-4 pt-10 md:px-10 md:pb-30">
+        <div className="w-3/4">
+          <h4 className="text-orange-400">Services</h4>
+          <h1 className="mt-4 w-full">A consultative approach</h1>
+        </div>
+        <div className="flex w-full text-lg md:text-xl">
+          <div className="left w-3/4">
+            <p className="mt-14 w-1/2">
+              MIMCO est un groupe d’investissement spécialisé dans l'immobilier
+              value add paneuropéen. Le groupe structure et gère des véhicules
+              d’investissement{" "}
+            </p>
+          </div>
+          <div className="right w-1/2">
+            <p className="mt-14 w-1/2">
+              MIMCO est un groupe d’investissement spécialisé dans l'immobilier
+              value add paneuropéen. Le groupe structure et gère des véhicules
+              d’investissement. <br /> MIMCO est un groupe d’investissement
+              spécialisé dans l'immobilier value add paneuropéen. Le groupe
+              structure et gère des véhicules d’investissement{" "}
+            </p>
+            <p className="w-1/2">
+              MIMCO est un groupe d’investissement spécialisé dans l'immobilier
+              value add paneuropéen. Le groupe structure et gère des véhicules
+              d’investissement{" "}
+            </p>
+          </div>
+        </div>
+        <div className="center-banner mt-12 rounded-sm bg-amber-400">
+          <div className="imgwrapper h-[300px] w-full rounded-sm bg-amber-200">
+            <img
+              src="about-img.webp"
+              alt=""
+              className="h-full w-full rounded-sm object-cover"
+            />
+          </div>
+        </div>
       </section>
     </div>
   );
