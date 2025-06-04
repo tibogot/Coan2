@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { UseLenis } from "./LenisContext";
 import Copy from "../components/Copy1";
+import Button from "../components/Buttons";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -304,7 +305,7 @@ export default function HomeCard() {
         <Card4 />
       </section>
 
-      <section className="outro min-h-[50vh] px-4 pt-10 md:px-10 md:pb-30">
+      <section className="outro min-h-[50vh] px-4 py-10 md:px-10 md:pb-30">
         <div className="w-3/4">
           <h4 className="text-orange-400">Services</h4>
           <h1 className="mt-4 w-full">A consultative approach</h1>
@@ -318,27 +319,31 @@ export default function HomeCard() {
             </p>
           </div>
           <div className="right w-1/2">
-            <p className="mt-14 w-1/2">
+            <p className="mt-14 w-full">
               MIMCO est un groupe d’investissement spécialisé dans l'immobilier
               value add paneuropéen. Le groupe structure et gère des véhicules
               d’investissement. <br /> MIMCO est un groupe d’investissement
               spécialisé dans l'immobilier value add paneuropéen. Le groupe
               structure et gère des véhicules d’investissement{" "}
             </p>
-            <p className="w-1/2">
+            <br />
+            <p className="w-full">
               MIMCO est un groupe d’investissement spécialisé dans l'immobilier
               value add paneuropéen. Le groupe structure et gère des véhicules
               d’investissement{" "}
             </p>
           </div>
         </div>
-        <div className="center-banner mt-12 rounded-sm bg-amber-400">
-          <div className="imgwrapper h-[300px] w-full rounded-sm bg-amber-200">
-            <img
-              src="about-img.webp"
-              alt=""
-              className="h-full w-full rounded-sm object-cover"
-            />
+        <div className="center-banner mt-16 rounded-sm bg-amber-400">
+          <div className="imgwrapper relative flex h-[400px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/about-img.webp)] text-white">
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="w-3/4 text-center">
+                Nous cultivons notre passion au travers de projets audacieux.
+              </h2>{" "}
+              <Button className="mt-10" variant="withArrow">
+                Learn more
+              </Button>
+            </div>
           </div>
         </div>
       </section>

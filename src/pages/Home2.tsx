@@ -28,6 +28,9 @@ const Home = () => {
         anticipatePin: 1,
       },
     });
+
+    // Hero image parallax
+
     gsap.to(".bgimg2", {
       yPercent: 20, // adjust this for stronger/weaker parallax
       ease: "none",
@@ -38,6 +41,8 @@ const Home = () => {
         scrub: true,
       },
     });
+
+    // Image Scale
 
     gsap.to(".section1", {
       scale: 1,
@@ -50,6 +55,8 @@ const Home = () => {
       },
     });
 
+    //Images Clip-Path
+
     tl2.to(".section2", {
       clipPath: "inset(0% 0% 0% 0%)",
       ease: "power1.out",
@@ -59,22 +66,6 @@ const Home = () => {
       clipPath: "inset(0% 0% 0% 0%)",
       ease: "power1.out",
     });
-    // gsap.fromTo(
-    //   ".card",
-    //   { scale: 1 },
-    //   {
-    //     scale: 0.5,
-    //     ease: "none",
-    //     stagger: 0.5,
-    //     // filter: "blur(0.5rem)",
-    //     scrollTrigger: {
-    //       trigger: ".cards-wrapper",
-    //       start: "top top",
-    //       scrub: 1,
-    //       // pin: true,
-    //     },
-    //   },
-    // );
 
     // ✅ Only clean up on unmount
     return () => {
@@ -97,10 +88,7 @@ const Home = () => {
         {/* Hero Section */}
 
         <section className="hero relative -mt-18 h-[100svh] w-full overflow-hidden p-4 text-white md:p-10">
-          <div
-            className="bgimg2 absolute inset-0 z-0 scale-100 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/coan2bg.webp')" }}
-          />
+          <div className="bgimg2 absolute inset-0 z-0 scale-100 bg-[url(/coan2bg.webp)] bg-cover bg-center bg-no-repeat" />
           <div className="relative z-10 flex h-full items-end md:items-center">
             <div className="flex w-full flex-col select-none">
               <div className="logobig w-full pb-6 md:w-1/2 md:pb-8">
@@ -170,17 +158,15 @@ const Home = () => {
         </section>
 
         {/* <Counter /> */}
-
         {/* <CautionTicker /> */}
-
-        {/* <img src="banner.svg" alt="" /> */}
-
         {/* <Ticker /> */}
 
-        {/* Big img 1 */}
+        {/* Images Clip-Path */}
+
         <div className="p-0">
           <section className="bigimg-wrapper relative h-screen w-full overflow-hidden">
             {/* Section 1 (top) */}
+
             <div className="section1 absolute inset-0 z-30 origin-center scale-75">
               <img
                 src="./5V6A0113-scaled.jpg"
@@ -198,6 +184,7 @@ const Home = () => {
             </div>
 
             {/* Section 2 (middle) */}
+
             <div
               className="section2 absolute inset-0 z-40"
               style={{ clipPath: "inset(100% 0 0 0)" }}
@@ -217,6 +204,7 @@ const Home = () => {
             </div>
 
             {/* Section 3 (bottom) */}
+
             <div
               className="section3 absolute inset-0 z-50"
               style={{ clipPath: "inset(100% 0 0 0)" }}
@@ -235,68 +223,16 @@ const Home = () => {
             </div>
           </section>
         </div>
-        {/* <section className="intro px-4 pt-10 md:px-10 md:pb-30">
-          <Copy>
-            <h4 className="text-orange-400">About us</h4>
-            <h1 className="mt-4 w-full md:w-3/4">
-              A construction <span className="text-orange-400">company,</span>
-              <br />
-              offering integrated solution and
-              <br />
-              related
-              <span className="text-orange-400"> services.</span>
-            </h1>
-          </Copy>
-          <div className="mt-30 flex-row md:flex">
-            <div className="w-full md:w-1/2">
-              <Copy>
-                <h3 className="w-full md:w-1/2">
-                  State-of-The-Art Construction Methods and Technologies
-                </h3>
-              </Copy>
-            </div>
-          </div>
-        </section> */}
-        {/* <section className="cards-wrapper flex w-full flex-col items-center justify-center gap-10 bg-blue-500 px-4 py-20 md:px-10">
-          <div className="card sticky h-[80vh] w-full bg-amber-200"></div>
-          <div className="card sticky h-[80vh] w-full bg-red-500"></div>
-          <div className="card sticky h-[80vh] w-full bg-pink-500"></div>
-        </section> */}
-        {/* <section className="relative flex h-screen w-full flex-col items-center justify-center bg-orange-500 px-4 py-20 text-white md:px-10">
-          <Copy>
-            <h1 className="w-full max-w-2xl text-center text-3xl font-bold">
-              Creating standout brands for startups that bring joy and leave
-              lasting impressions.
-            </h1>
-          </Copy>
-        </section> */}
 
         <HomeCard />
-        {/* <section className="outro relative flex h-screen w-full items-center justify-center bg-red-300 p-4 md:p-10">
-          <div className="absolute top-0 left-0 h-full w-full bg-[url(/bg-hero.jpg)]"></div>
-          <Copy>
-            <h1 className="max-w-4xl text-center text-3xl font-bold">
-              Creating standout brands for startups that bring joy and leave
-              lasting impressions.
-            </h1>
-          </Copy>
-        </section> */}
 
-        {/* <section className="font-NHD relative h-[100svh] w-full overflow-hidden bg-black"></section> */}
+        {/* Pre-black Section */}
 
-        {/* Black Section   */}
-
-        <div className="w-full flex-row bg-black py-20 text-white md:flex">
-          <GridComponent />
-          <div className="flex w-full flex-col items-start justify-start px-4 py-4 md:w-1/2 md:px-10">
-            <Copy>
-              <h4 className="">Leading the way</h4>
-              <h2 className="mt-4">
-                A construction <span className="text-orange-400">company,</span>
-                <br /> offering integrated{" "}
-                <span className="text-orange-400">solution</span> and related
-                services.
-              </h2>{" "}
+        <section className="px-4 py-10 md:px-10 md:pb-30">
+          <h4 className="text-orange-400">About us</h4>
+          <div className="wrapper flex w-full">
+            <div className="left flex w-1/2 flex-col justify-between">
+              <h1 className="mt-4 w-full md:w-3/4">Consultative</h1>
               <p className="mt-10 w-1/2 text-base">
                 MIMCO est un groupe d’investissement spécialisé dans
                 l'immobilier value add paneuropéen. Le groupe structure et gère
@@ -304,31 +240,73 @@ const Home = () => {
                 clientèle institutionnelle ainsi que de family offices et
                 banques privées.
               </p>
-            </Copy>
+            </div>
+            <div className="right grow">
+              <div className="img-wrapper mt-4 h-[400px] w-full bg-amber-100">
+                <img
+                  src="road.webp"
+                  alt="road"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        <section className="font-NHD relative min-h-screen w-full overflow-hidden bg-black px-4 py-10 text-white md:flex md:px-10">
-          <div className="left w-3/4">
-            <Copy>
+        </section>
+
+        {/* Black Section   */}
+
+        {/* Grid Dots */}
+
+        <section className="w-full flex-row bg-black px-10 py-20 text-white md:flex">
+          <GridComponent />
+          <div className="flex w-full flex-col items-start justify-start px-4 py-4 md:w-1/2 md:px-20">
+            <h4 className="">Leading the way</h4>
+            <h2 className="mt-4">
+              A construction <span className="text-orange-400">company,</span>
+              <br /> offering integrated
+              <span className="text-orange-400">solution</span> and related
+              services.
+            </h2>
+            <p className="mt-10 w-3/4 pb-10 text-xl text-balance">
+              MIMCO est un groupe d’investissement spécialisé dans l'immobilier
+              value add paneuropéen. Le groupe structure et gère des véhicules
+              d’investissement innovants au service d’une clientèle
+              institutionnelle ainsi que de family offices et banques privées.
+            </p>
+
+            <Button className="mt-10" variant="withArrow">
+              Learn more
+            </Button>
+          </div>
+        </section>
+
+        {/* Chart Part*/}
+
+        <section className="font-NHD relative flex min-h-screen w-full flex-col overflow-hidden bg-black px-4 py-20 text-white md:px-10">
+          <div className="w-full md:flex">
+            <div className="left w-1/2">
               <h2 className="w-3/4">
                 Over 18 years grinding alongside founders with a chip.
               </h2>
-            </Copy>
-          </div>
-          <div className="right w-1/2">
-            <Copy>
-              <p className="w-3/4 pb-10 text-xl text-balance">
-                MIMCO est un groupe d'investissement spécialisé dans
-                l'immobilier value add paneuropéen.
-                <br />
-                Le groupe structure et gère des véhicules d'investissement
-                innovants au service d'une clientèle institutionnelle ainsi que
-                de family offices et banques privées.
+            </div>
+            <div className="right w-1/2">
+              <p className="text-xl text-balance">
+                MIMCO est un groupe d’investissement spécialisé dans
+                l'immobilier value add paneuropéen. Le groupe structure et gère
+                des véhicules d’investissement innovants au service d’une
+                clientèle institutionnelle ainsi que de family offices et
+                banques privées.
               </p>
-            </Copy>
+            </div>
+          </div>
+          <div className="charts mt-10 flex w-full flex-1 items-end gap-10 bg-blue-500">
+            <div className="chart1 h-[300px] w-1/3 rounded-sm bg-orange-400"></div>
+            <div className="chart2 h-[500px] w-1/3 rounded-sm bg-orange-400"></div>
+            <div className="chart3 h-[400px] w-1/3 rounded-sm bg-orange-400"></div>
           </div>
         </section>
-        {/* <CounterDark /> */}
+
+        {/* Team Section */}
 
         <section className="relative flex w-full overflow-hidden px-4 pt-24 pb-24 md:px-10">
           <div className="flex w-full flex-col gap-4 text-black">
@@ -346,7 +324,7 @@ const Home = () => {
 
         <ProfilesTicker />
 
-        {/* <ProfilesTickerR /> */}
+        {/* FAQ */}
 
         <FAQ />
 

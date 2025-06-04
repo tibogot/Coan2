@@ -94,7 +94,7 @@ const Gallery = () => {
 
   return (
     <>
-      <section className="hero font-NHD relative -mt-18 flex h-screen w-full items-end bg-red-300 p-4 text-white md:p-10">
+      <section className="hero font-NHD relative -mt-18 flex h-[100svh] w-full items-end bg-red-300 p-4 text-white md:p-10">
         <div className="absolute top-0 left-0 h-full w-full bg-[url(/gallery-img.webp)]"></div>
         <div className="absolute top-0 left-0 h-full w-full bg-black/10"></div>
         <Copy>
