@@ -19,17 +19,19 @@ function Card1() {
     <div className="card relative w-full" id="card-1">
       <div className="card-inner relative flex h-[400px] w-full bg-gray-200 p-4 md:p-10">
         <div className="left flex w-3/4 flex-col justify-between">
-          <h6>Planning</h6>
+          <Copy>
+            <h6>Planning</h6>
+          </Copy>
           <div className="p">
-            <p className="w-1/3">
-              Creating an ordered timeline of events, staffing the project and
-              determining the necessary materials and equipments.
-            </p>
-            <br />
-            <p className="w-1/3">
-              Creating an ordered timeline of events, staffing the project and
-              determining the necessary materials and equipments.
-            </p>
+            <Copy>
+              <p className="w-1/3 text-xl">
+                Creating an ordered timeline of events, staffing the project and
+                determining the necessary materials and equipments.
+                <br />
+                Creating an ordered timeline of events, staffing the project and
+                determining the necessary materials and equipments.
+              </p>
+            </Copy>
           </div>
         </div>
         <div className="right flex w-1/4 bg-amber-200">
@@ -51,17 +53,19 @@ function Card2() {
     <div className="card relative w-full" id="card-2">
       <div className="card-inner relative flex h-[400px] w-full bg-black p-4 text-white md:p-10">
         <div className="left flex w-3/4 flex-col justify-between">
-          <h6>Design</h6>
+          <Copy>
+            <h6>Design</h6>
+          </Copy>
           <div className="p">
-            <p className="w-1/3">
-              Creating an ordered timeline of events, staffing the project and
-              determining the necessary materials and equipments.
-            </p>
-            <br />
-            <p className="w-1/3">
-              Creating an ordered timeline of events, staffing the project and
-              determining the necessary materials and equipments.
-            </p>
+            <Copy>
+              <p className="w-1/3 text-xl">
+                Creating an ordered timeline of events, staffing the project and
+                determining the necessary materials and equipments.
+                <br />
+                Creating an ordered timeline of events, staffing the project and
+                determining the necessary materials and equipments.
+              </p>
+            </Copy>
           </div>
         </div>
         <div className="right flex w-1/4">
@@ -83,17 +87,19 @@ function Card3() {
     <div className="card relative w-full" id="card-3">
       <div className="card-inner relative flex h-[400px] w-full bg-orange-400 p-4 text-white md:p-10">
         <div className="left flex w-3/4 flex-col justify-between">
-          <h2>Operation & Maintenance</h2>
+          <Copy>
+            <h2>Operation & Maintenance</h2>
+          </Copy>
           <div className="p">
-            <p className="w-1/3">
-              Creating an ordered timeline of events, staffing the project and
-              determining the necessary materials and equipments.
-            </p>
-            <br />
-            <p className="w-1/3">
-              Creating an ordered timeline of events, staffing the project and
-              determining the necessary materials and equipments.
-            </p>
+            <Copy>
+              <p className="w-1/3 text-xl">
+                Creating an ordered timeline of events, staffing the project and
+                determining the necessary materials and equipments.
+                <br />
+                Creating an ordered timeline of events, staffing the project and
+                determining the necessary materials and equipments.
+              </p>
+            </Copy>
           </div>
         </div>
         <div className="right flex w-1/4">
@@ -115,17 +121,19 @@ function Card4() {
     <div className="card relative w-full" id="card-4">
       <div className="card-inner relative flex h-[400px] w-full bg-orange-500 p-4 text-white md:p-10">
         <div className="left flex w-3/4 flex-col justify-between">
-          <h2>Construction</h2>
+          <Copy>
+            <h2>Construction</h2>
+          </Copy>
           <div className="p">
-            <p className="w-1/3">
-              Creating an ordered timeline of events, staffing the project and
-              determining the necessary materials and equipments.
-            </p>
-            <br />
-            <p className="w-1/3">
-              Creating an ordered timeline of events, staffing the project and
-              determining the necessary materials and equipments.
-            </p>
+            <Copy>
+              <p className="w-1/3 text-xl">
+                Creating an ordered timeline of events, staffing the project and
+                determining the necessary materials and equipments.
+                <br />
+                Creating an ordered timeline of events, staffing the project and
+                determining the necessary materials and equipments.
+              </p>
+            </Copy>
           </div>
         </div>
         <div className="right flex w-1/4">
@@ -307,44 +315,53 @@ export default function HomeCard() {
 
       <section className="outro min-h-[50vh] px-4 py-10 md:px-10 md:pb-30">
         <div className="w-3/4">
-          <h4 className="text-orange-400">Services</h4>
-          <h1 className="mt-4 w-full">A consultative approach</h1>
+          <Copy>
+            <h4 className="text-orange-400">Services</h4>
+            <h1 className="mt-4 w-full">A consultative approach</h1>
+          </Copy>
         </div>
         <div className="flex w-full text-lg md:text-xl">
           <div className="left w-3/4">
-            <p className="mt-14 w-1/2">
-              MIMCO est un groupe d’investissement spécialisé dans l'immobilier
-              value add paneuropéen. Le groupe structure et gère des véhicules
-              d’investissement{" "}
-            </p>
+            <Copy>
+              <p className="mt-14 w-1/2">
+                MIMCO est un groupe d’investissement spécialisé dans
+                l'immobilier value add paneuropéen. Le groupe structure et gère
+                des véhicules d’investissement{" "}
+              </p>
+            </Copy>
           </div>
           <div className="right w-1/2">
-            <p className="mt-14 w-full">
-              MIMCO est un groupe d’investissement spécialisé dans l'immobilier
-              value add paneuropéen. Le groupe structure et gère des véhicules
-              d’investissement. <br /> MIMCO est un groupe d’investissement
-              spécialisé dans l'immobilier value add paneuropéen. Le groupe
-              structure et gère des véhicules d’investissement{" "}
-            </p>
-            <br />
-            <p className="w-full">
-              MIMCO est un groupe d’investissement spécialisé dans l'immobilier
-              value add paneuropéen. Le groupe structure et gère des véhicules
-              d’investissement{" "}
-            </p>
+            <Copy>
+              <p className="mt-14 w-full">
+                MIMCO est un groupe d’investissement spécialisé dans
+                l'immobilier value add paneuropéen. Le groupe structure et gère
+                des véhicules d’investissement. <br /> MIMCO est un groupe
+                d’investissement spécialisé dans l'immobilier value add
+                paneuropéen. Le groupe structure et gère des véhicules
+                d’investissement{" "}
+              </p>
+              <br />
+              <p className="w-full">
+                MIMCO est un groupe d’investissement spécialisé dans
+                l'immobilier value add paneuropéen. Le groupe structure et gère
+                des véhicules d’investissement{" "}
+              </p>
+            </Copy>
           </div>
         </div>
         <div className="center-banner mt-16 rounded-sm bg-amber-400">
-          <div className="imgwrapper relative flex h-[400px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/about-img.webp)] text-white">
-            <div className="flex flex-col items-center justify-center">
-              <h2 className="w-3/4 text-center">
-                Nous cultivons notre passion au travers de projets audacieux.
-              </h2>{" "}
-              <Button className="mt-10" variant="withArrow">
-                Learn more
-              </Button>
+          <Copy>
+            <div className="imgwrapper relative flex h-[400px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/about-img.webp)] text-white">
+              <div className="flex flex-col items-center justify-center">
+                <h2 className="w-3/4 text-center">
+                  Nous cultivons notre passion au travers de projets audacieux.
+                </h2>{" "}
+                <Button className="mt-10" variant="withArrow">
+                  Learn more
+                </Button>
+              </div>
             </div>
-          </div>
+          </Copy>
         </div>
       </section>
     </div>
