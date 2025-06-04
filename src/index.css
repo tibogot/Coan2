@@ -23,11 +23,11 @@ body {
 } */
 
 h1 {
-  @apply mb-4 text-4xl font-normal md:text-6xl;
+  @apply text-4xl font-normal md:text-6xl;
 }
 
 h2 {
-  @apply mb-3 text-4xl md:text-6xl;
+  @apply text-4xl md:text-6xl;
 }
 
 /* h2 {

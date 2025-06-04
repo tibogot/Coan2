@@ -284,20 +284,20 @@ export default function HomeCard() {
   return (
     //@ts-ignore
     <div className="overflow-x-hidden" ref={container}>
-      <section className="intro flex min-h-[50vh] px-4 pt-10 md:px-10 md:pb-30">
-        <div className="left w-3/4">
+      <section className="intro min-h-[50vh] px-4 pt-10 md:flex md:px-10 md:pb-30">
+        <div className="left md:w-3/4">
           <Copy>
             <h4 className="text-orange-400">Services</h4>
-            <h1 className="mt-4 w-full">
+            <h2 className="mt-4 w-full">
               A construction company,
               <br />
               offering integrated solution and
-            </h1>
+            </h2>
           </Copy>
         </div>
-        <div className="right w-1/2">
+        <div className="right md:w-1/2">
           <Copy>
-            <p className="mt-14 w-1/2 text-lg md:text-xl">
+            <p className="mt-14 text-lg md:w-1/2 md:text-xl">
               MIMCO est un groupe d’investissement spécialisé dans l'immobilier
               value add paneuropéen. Le groupe structure et gère des véhicules
               d’investissement{" "}
@@ -314,23 +314,23 @@ export default function HomeCard() {
       </section>
 
       <section className="outro min-h-[50vh] px-4 py-10 md:px-10 md:pb-30">
-        <div className="w-3/4">
+        <div className="md:w-3/4">
           <Copy>
             <h4 className="text-orange-400">Services</h4>
-            <h1 className="mt-4 w-full">A consultative approach</h1>
+            <h2 className="mt-4 w-full">A consultative approach</h2>
           </Copy>
         </div>
-        <div className="flex w-full text-lg md:text-xl">
-          <div className="left w-3/4">
+        <div className="w-full text-lg md:flex md:text-xl">
+          <div className="left md:w-3/4">
             <Copy>
-              <p className="mt-14 w-1/2">
+              <p className="mt-14 md:w-1/2">
                 MIMCO est un groupe d’investissement spécialisé dans
                 l'immobilier value add paneuropéen. Le groupe structure et gère
                 des véhicules d’investissement{" "}
               </p>
             </Copy>
           </div>
-          <div className="right w-1/2">
+          <div className="right md:w-1/2">
             <Copy>
               <p className="mt-14 w-full">
                 MIMCO est un groupe d’investissement spécialisé dans
@@ -353,7 +353,7 @@ export default function HomeCard() {
           <Copy>
             <div className="imgwrapper relative flex h-[400px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/about-img.webp)] text-white">
               <div className="flex flex-col items-center justify-center">
-                <h2 className="w-3/4 text-center">
+                <h2 className="text-center md:w-3/4">
                   Nous cultivons notre passion au travers de projets audacieux.
                 </h2>{" "}
                 <Button className="mt-10" variant="withArrow">

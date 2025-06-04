@@ -49,13 +49,14 @@ const Chart = () => {
       // Create a timeline for synchronized animations
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: chartSelector,
+          // trigger: chartSelector,
+          trigger: ".chart-container",
           start: "top 80%",
           end: "bottom 60%",
           scrub: 1,
           invalidateOnRefresh: true,
           refreshPriority: 0,
-          //   markers: true,
+          markers: true,
         },
       });
 
@@ -97,16 +98,16 @@ const Chart = () => {
   }, []);
 
   return (
-    <section className="font-NHD relative flex min-h-screen w-full flex-col overflow-hidden bg-black px-4 py-20 text-white md:px-10">
+    <section className="chart-container font-NHD relative flex min-h-screen w-full flex-col overflow-hidden bg-black/10 px-4 py-20 text-white md:px-10">
       <div className="w-full md:flex">
-        <div className="left w-1/2">
+        <div className="left md:w-1/2">
           <Copy>
-            <h2 className="w-3/4">
+            <h2 className="md:w-3/4">
               Over 18 years grinding alongside founders with a chip.
             </h2>
           </Copy>
         </div>
-        <div className="right w-1/2">
+        <div className="right md:w-1/2">
           <Copy>
             <p className="text-xl text-balance">
               MIMCO est un groupe d'investissement spécialisé dans l'immobilier

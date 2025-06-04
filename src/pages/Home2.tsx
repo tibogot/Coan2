@@ -166,7 +166,7 @@ const Home = () => {
         {/* Images Clip-Path */}
 
         <div className="p-0">
-          <section className="bigimg-wrapper relative h-screen w-full overflow-hidden">
+          <section className="bigimg-wrapper relative h-[100svh] w-full overflow-hidden">
             {/* Section 1 (top) */}
 
             <div className="section1 absolute inset-0 z-30 origin-center scale-75">
@@ -234,11 +234,11 @@ const Home = () => {
           <Copy>
             <h4 className="text-orange-400">About us</h4>
           </Copy>
-          <div className="wrapper flex w-full">
-            <div className="left flex w-1/2 flex-col justify-between">
+          <div className="wrapper w-full md:flex">
+            <div className="left flex flex-col justify-between md:w-1/2">
               <Copy>
-                <h1 className="mt-4 w-full md:w-3/4">Consultative</h1>
-                <p className="mt-10 w-1/2 text-xl">
+                <h2 className="mt-4 w-full md:w-3/4">Consultative</h2>
+                <p className="mt-10 w-full text-xl md:w-1/2">
                   MIMCO est un groupe d’investissement spécialisé dans
                   l'immobilier value add paneuropéen. Le groupe structure et
                   gère des véhicules d’investissement innovants au service d’une
@@ -263,9 +263,9 @@ const Home = () => {
 
         {/* Grid Dots */}
 
-        <section className="w-full flex-row bg-black px-10 py-20 text-white md:flex">
+        <section className="w-full flex-row bg-black px-4 py-20 text-white md:flex md:px-10">
           <GridComponent />
-          <div className="flex w-full flex-col items-start justify-start px-4 py-4 md:w-1/2 md:px-20">
+          <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2">
             <Copy>
               <h4 className="">Leading the way</h4>
               <h2 className="mt-4">
@@ -274,7 +274,7 @@ const Home = () => {
                 <span className="text-orange-400">solution</span> and related
                 services.
               </h2>
-              <p className="mt-10 w-3/4 pb-10 text-xl text-balance">
+              <p className="mt-10 w-full pb-10 text-xl text-balance md:w-3/4">
                 MIMCO est un groupe d’investissement spécialisé dans
                 l'immobilier value add paneuropéen. Le groupe structure et gère
                 des véhicules d’investissement innovants au service d’une
@@ -301,7 +301,7 @@ const Home = () => {
             <Copy>
               <p className="text-lg text-orange-400">We're here to help.</p>
               <h2>Discover our team</h2>
-              <p className="mt-24 w-full text-base md:w-1/2">
+              <p className="mt-24 w-full text-xl md:w-1/2">
                 COAN's professional employees play an integral role in
                 successfully delivering some of the largest and most complex
                 construction engineering projects in Africa.
@@ -333,10 +333,10 @@ const Home = () => {
             {/* Text Container */}
             <div className="absolute top-20 z-10 flex w-full justify-start px-4 text-white md:px-10">
               <Copy>
-                <h1 className="">
+                <h2 className="">
                   Building the Future with Precision
                   <br />& Expertise.
-                </h1>
+                </h2>
               </Copy>
             </div>
           </div>
