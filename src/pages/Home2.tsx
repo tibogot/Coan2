@@ -70,11 +70,12 @@ const Home = () => {
 
     // ✅ Only clean up on unmount
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      ScrollTrigger.clearMatchMedia();
+      // ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      // ScrollTrigger.clearMatchMedia();
       tl2.kill();
       gsap.killTweensOf(".section1");
-      gsap.globalTimeline.clear();
+      gsap.killTweensOf(".bgimg2");
+      // gsap.globalTimeline.clear();
     };
   }, []);
 
