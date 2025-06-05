@@ -177,7 +177,7 @@ const Home = () => {
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 px-4 text-center text-white">
                 <h2>
-                  A construction{" "}
+                  A construction
                   <span className="text-orange-400">company</span>
                   <br /> offering integrated{" "}
                   <span className="text-orange-400">solution</span>
@@ -231,28 +231,26 @@ const Home = () => {
         {/* Pre-black Section */}
 
         <section className="px-4 py-10 md:px-10 md:pb-30">
-          <Copy>
-            <h4 className="text-orange-400">About us</h4>
-          </Copy>
+          <h4 className="text-orange-400">About us</h4>
+
           <div className="wrapper w-full md:flex">
             <div className="left flex flex-col justify-between md:w-1/2">
               <Copy>
                 <h2 className="mt-4 w-full md:w-3/4">Consultative</h2>
+              </Copy>
+              <Copy>
                 <p className="mt-10 w-full text-xl md:w-1/2">
                   MIMCO est un groupe d’investissement spécialisé dans
-                  l'immobilier value add paneuropéen. Le groupe structure et
-                  gère des véhicules d’investissement innovants au service d’une
-                  clientèle institutionnelle ainsi que de family offices et
-                  banques privées.
+                  l'immobilier value add paneuropéen.
                 </p>
               </Copy>
             </div>
             <div className="right grow">
-              <div className="img-wrapper mt-4 h-[400px] w-full bg-amber-100">
+              <div className="img-wrapper mt-10 h-[400px] w-full bg-amber-100 md:mt-4">
                 <img
                   src="road.webp"
                   alt="road"
-                  className="h-full w-full object-cover"
+                  className="road-img h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -268,7 +266,7 @@ const Home = () => {
           <div className="flex w-full flex-col items-start justify-start px-10 py-4 md:w-1/2">
             <Copy>
               <h4 className="">Leading the way</h4>
-              <h2 className="mt-4">
+              <h2 className="mt-4 w-full">
                 A construction <span className="text-orange-400">company,</span>
                 <br /> offering integrated
                 <span className="text-orange-400">solution</span> and related
@@ -288,11 +286,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Chart Part*/}
-
         <Chart />
-
-        {/* <Counter /> */}
 
         {/* Team Section */}
 

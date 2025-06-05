@@ -27,9 +27,6 @@ function Card1() {
               <p className="w-1/3 text-xl">
                 Creating an ordered timeline of events, staffing the project and
                 determining the necessary materials and equipments.
-                <br />
-                Creating an ordered timeline of events, staffing the project and
-                determining the necessary materials and equipments.
               </p>
             </Copy>
           </div>
@@ -37,7 +34,7 @@ function Card1() {
         <div className="right flex w-1/4 bg-amber-200">
           <div className="img-wrap h-full w-full rounded-sm">
             <img
-              src="coan2bg.webp"
+              src="plan.webp"
               alt="Planning visual"
               className="h-full w-full rounded-sm object-cover"
             />
@@ -59,11 +56,8 @@ function Card2() {
           <div className="p">
             <Copy>
               <p className="w-1/3 text-xl">
-                Creating an ordered timeline of events, staffing the project and
-                determining the necessary materials and equipments.
-                <br />
-                Creating an ordered timeline of events, staffing the project and
-                determining the necessary materials and equipments.
+                We work hard to develop innovative and cost-effective solutions
+                for our client both public and private.
               </p>
             </Copy>
           </div>
@@ -71,7 +65,7 @@ function Card2() {
         <div className="right flex w-1/4">
           <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
             <img
-              src="https://picsum.photos/200/300"
+              src="design.webp"
               alt="Planning visual"
               className="h-full w-full rounded-sm object-cover"
             />
@@ -93,11 +87,9 @@ function Card3() {
           <div className="p">
             <Copy>
               <p className="w-1/3 text-xl">
-                Creating an ordered timeline of events, staffing the project and
-                determining the necessary materials and equipments.
-                <br />
-                Creating an ordered timeline of events, staffing the project and
-                determining the necessary materials and equipments.
+                We emphasize on a broad spectrum of services, competences,
+                processes and tools to assure the built environment will perform
+                the functions for which a facility was designed and constructed.
               </p>
             </Copy>
           </div>
@@ -105,7 +97,7 @@ function Card3() {
         <div className="right flex w-1/4">
           <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
             <img
-              src="https://picsum.photos/200/300"
+              src="operation.webp"
               alt="Planning visual"
               className="h-full w-full rounded-sm object-cover"
             />
@@ -127,11 +119,8 @@ function Card4() {
           <div className="p">
             <Copy>
               <p className="w-1/3 text-xl">
-                Creating an ordered timeline of events, staffing the project and
-                determining the necessary materials and equipments.
-                <br />
-                Creating an ordered timeline of events, staffing the project and
-                determining the necessary materials and equipments.
+                Innovative execution methods to deliver safe, high quality
+                project is the foundation of our business and success.
               </p>
             </Copy>
           </div>
@@ -139,7 +128,7 @@ function Card4() {
         <div className="right flex w-1/4">
           <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
             <img
-              src="https://picsum.photos/200/300"
+              src="construction.webp"
               alt="Planning visual"
               className="h-full w-full rounded-sm object-cover"
             />
@@ -288,10 +277,8 @@ export default function HomeCard() {
         <div className="left md:w-3/4">
           <Copy>
             <h4 className="text-orange-400">Services</h4>
-            <h2 className="mt-4 w-full">
-              A construction company,
-              <br />
-              offering integrated solution and
+            <h2 className="mt-4 w-full md:w-3/4">
+              Develop comprehensive solutions for each project
             </h2>
           </Copy>
         </div>
@@ -350,18 +337,16 @@ export default function HomeCard() {
           </div>
         </div>
         <div className="center-banner mt-16 rounded-sm bg-amber-400">
-          <Copy>
-            <div className="imgwrapper relative flex h-[400px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/about-img.webp)] text-white">
-              <div className="flex flex-col items-center justify-center">
-                <h2 className="text-center md:w-3/4">
-                  Nous cultivons notre passion au travers de projets audacieux.
-                </h2>{" "}
-                <Button className="mt-10" variant="withArrow">
-                  Learn more
-                </Button>
-              </div>
+          <div className="imgwrapper relative flex h-[400px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/about-img.webp)] text-white">
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="text-center md:w-3/4">
+                Nous cultivons notre passion au travers de projets audacieux.
+              </h2>{" "}
+              <Button className="mt-10" variant="withArrow">
+                Learn more
+              </Button>
             </div>
-          </Copy>
+          </div>
         </div>
       </section>
     </div>
