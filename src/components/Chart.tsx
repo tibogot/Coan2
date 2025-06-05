@@ -51,12 +51,12 @@ const Chart = () => {
         scrollTrigger: {
           // trigger: chartSelector,
           trigger: ".chart-container",
-          start: "top 80%",
-          end: "bottom 60%",
+          start: "30% 80%",
+          end: "top+=55% 60%",
           scrub: 1,
           invalidateOnRefresh: true,
           refreshPriority: 0,
-          markers: true,
+          // markers: true,
         },
       });
 
@@ -98,7 +98,7 @@ const Chart = () => {
   }, []);
 
   return (
-    <section className="chart-container font-NHD relative flex min-h-screen w-full flex-col overflow-hidden bg-black/10 px-4 py-20 text-white md:px-10">
+    <section className="chart-container font-NHD relative flex min-h-screen w-full flex-col overflow-hidden bg-black px-4 py-20 text-white md:px-10">
       <div className="w-full md:flex">
         <div className="left md:w-1/2">
           <Copy>

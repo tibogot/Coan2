@@ -265,7 +265,7 @@ const Home = () => {
 
         <section className="w-full flex-row bg-black px-4 py-20 text-white md:flex md:px-10">
           <GridComponent />
-          <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2">
+          <div className="flex w-full flex-col items-start justify-start px-10 py-4 md:w-1/2">
             <Copy>
               <h4 className="">Leading the way</h4>
               <h2 className="mt-4">
@@ -299,9 +299,9 @@ const Home = () => {
         <section className="relative flex w-full overflow-hidden px-4 pt-24 pb-24 md:px-10">
           <div className="flex w-full flex-col gap-4 text-black">
             <Copy>
-              <p className="text-lg text-orange-400">We're here to help.</p>
-              <h2>Discover our team</h2>
-              <p className="mt-24 w-full text-xl md:w-1/2">
+              <h4 className="text-orange-400">We're here to help.</h4>
+              <h2 className="mt-4">Discover our team</h2>
+              <p className="mt-14 w-full text-xl md:w-1/4">
                 COAN's professional employees play an integral role in
                 successfully delivering some of the largest and most complex
                 construction engineering projects in Africa.
