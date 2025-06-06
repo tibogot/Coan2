@@ -286,7 +286,7 @@ export default function HomeCard() {
   return (
     //@ts-ignore
     <div className="overflow-x-hidden" ref={container}>
-      <section className="intro min-h-[40vh] px-4 pt-10 md:flex md:min-h-[50vh] md:px-10 md:pb-30">
+      <section className="intro min-h-[40vh] px-4 pt-10 pb-14 md:flex md:min-h-[50vh] md:px-10 md:pb-30">
         <div className="left md:w-3/4">
           <Copy>
             <h4 className="text-base text-orange-400 md:text-lg">Services</h4>
@@ -352,7 +352,7 @@ export default function HomeCard() {
           </div>
         </div>
         <div className="center-banner mt-8 rounded-sm bg-amber-400 md:mt-16">
-          <div className="imgwrapper relative flex h-[300px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/about-img.webp)] bg-cover bg-center text-white md:h-[400px]">
+          <div className="imgwrapper relative flex h-[300px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/grid-images/image-4.webp)] bg-cover bg-center text-white md:h-[400px]">
             <div className="flex flex-col items-center justify-center px-4 text-center">
               <h2 className="text-xl md:w-3/4 md:text-2xl lg:text-3xl">
                 Nous cultivons notre passion au travers de projets audacieux.

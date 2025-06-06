@@ -68,6 +68,17 @@ const Home = () => {
       ease: "power1.out",
     });
 
+    gsap.to(".road-img", {
+      scale: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".pre-black",
+        start: "top 90%",
+        end: "bottom 90%",
+        scrub: true,
+      },
+    });
+
     // ✅ Only clean up on unmount
     return () => {
       // ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -75,6 +86,7 @@ const Home = () => {
       tl2.kill();
       gsap.killTweensOf(".section1");
       gsap.killTweensOf(".bgimg2");
+      gsap.killTweensOf(".road-img");
       // gsap.globalTimeline.clear();
     };
   }, []);
@@ -121,7 +133,7 @@ const Home = () => {
               <span className="text-orange-400"> services.</span>
             </h1>
           </Copy>
-          <div className="mt-30 flex-row md:flex">
+          <div className="mt-14 flex-row md:mt-30 md:flex">
             <div className="w-full md:w-1/2">
               <Copy>
                 <h3 className="w-full md:w-1/2">
@@ -230,7 +242,7 @@ const Home = () => {
 
         {/* Pre-black Section */}
 
-        <section className="px-4 py-10 md:px-10 md:pb-30">
+        <section className="pre-black px-4 py-10 md:px-10 md:pb-30">
           <h4 className="text-orange-400">About us</h4>
 
           <div className="wrapper w-full md:flex">
@@ -246,11 +258,11 @@ const Home = () => {
               </Copy>
             </div>
             <div className="right grow">
-              <div className="img-wrapper mt-10 h-[400px] w-full bg-amber-100 md:mt-4">
+              <div className="img-wrapper mt-10 h-[400px] w-full  md:mt-4">
                 <img
                   src="road.webp"
                   alt="road"
-                  className="road-img h-full w-full object-cover"
+                  className="road-img h-full w-full scale-0 object-cover"
                 />
               </div>
             </div>
