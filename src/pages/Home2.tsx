@@ -10,7 +10,7 @@ import Copy from "../components/Copy1";
 import GridComponent from "../components/GridComponent2";
 import HomeCard from "../components/CardsScroll12";
 import { useGSAP } from "@gsap/react";
-import Chart from "../components/Chart";
+import Chart from "../components/Chart2";
 // import CounterDark from "../components/CounterDark";
 // import CautionTicker from "../components/CautionTicker";
 
@@ -258,7 +258,7 @@ const Home = () => {
               </Copy>
             </div>
             <div className="right grow">
-              <div className="img-wrapper mt-10 h-[400px] w-full  md:mt-4">
+              <div className="img-wrapper mt-10 h-[400px] w-full md:mt-4">
                 <img
                   src="road.webp"
                   alt="road"
@@ -278,7 +278,7 @@ const Home = () => {
           <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2 md:px-10">
             <Copy>
               <h4 className="">Leading the way</h4>
-              <h2 className="mt-4 w-full">
+              <h2 className="mt-4">
                 A construction <span className="text-orange-400">company,</span>
                 <br /> offering integrated
                 <span className="text-orange-400">solution</span> and related
