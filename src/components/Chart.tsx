@@ -98,7 +98,7 @@ const Chart = () => {
   }, []);
 
   return (
-    <section className="chart-container font-NHD relative flex min-h-screen w-full flex-col overflow-hidden bg-black px-4 py-20 text-white md:px-10">
+    <section className="chart-container font-NHD relative flex min-h-screen w-full flex-col overflow-hidden bg-black px-4 py-10 pb-20 text-white md:px-10">
       <div className="w-full md:flex">
         <div className="left md:w-3/4">
           <Copy>
@@ -107,9 +107,9 @@ const Chart = () => {
             </h2>
           </Copy>
         </div>
-        <div className="right w-1/2">
+        <div className="right md:w-1/2">
           <Copy>
-            <p className="w-1/2 text-xl text-balance">
+            <p className="mt-14 text-xl text-balance md:w-3/4">
               MIMCO est un groupe d'investissement spécialisé dans l'immobilier
               value add paneuropéen. Le groupe structure et gère des véhicules
               d'investissement innovants au service d'une clientèle

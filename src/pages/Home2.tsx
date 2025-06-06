@@ -166,7 +166,7 @@ const Home = () => {
         {/* Images Clip-Path */}
 
         <div className="p-0">
-          <section className="bigimg-wrapper relative h-[100svh] w-full overflow-hidden">
+          <section className="bigimg-wrapper relative h-screen w-full overflow-hidden">
             {/* Section 1 (top) */}
 
             <div className="section1 absolute inset-0 z-30 origin-center scale-75">
@@ -263,7 +263,7 @@ const Home = () => {
 
         <section className="w-full flex-row bg-black px-4 py-20 text-white md:flex md:px-10">
           <GridComponent />
-          <div className="flex w-full flex-col items-start justify-start px-10 py-4 md:w-1/2">
+          <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2 md:px-10">
             <Copy>
               <h4 className="">Leading the way</h4>
               <h2 className="mt-4 w-full">
