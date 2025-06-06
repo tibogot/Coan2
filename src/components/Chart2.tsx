@@ -54,9 +54,11 @@ const Chart = () => {
     counters.forEach(({ chartSelector }) => {
       gsap.set(chartSelector, {
         height: initialHeight,
-        // Prevent width changes on mobile
-        width: "auto",
-        minWidth: isMobile ? "calc(33.333% - 8px)" : "auto",
+        // Prevent width changes and stabilize layout
+        overflow: "hidden",
+        willChange: "height", // Optimize for height changes only
+        backfaceVisibility: "hidden", // Prevent flickering
+        perspective: 1000, // Enable 3D acceleration
       });
     });
 
@@ -70,17 +72,26 @@ const Chart = () => {
         scrollTrigger: {
           trigger: ".chart-container",
           // Different scroll behavior for mobile vs desktop
-          start: isMobile ? "20% 90%" : "30% 80%",
-          end: isMobile ? "60% 70%" : "top+=55% 60%",
-          scrub: isMobile ? 0.5 : 1, // Gentler scrub on mobile
+          start: isMobile ? "top 80%" : "30% 80%",
+          end: isMobile ? "bottom 20%" : "top+=55% 60%",
+          scrub: isMobile ? 0.8 : 1, // Gentler scrub on mobile
           invalidateOnRefresh: true,
           refreshPriority: 0,
-          // Disable on very small screens to prevent issues
-          ...(isMobile &&
-            window.innerWidth < 480 && {
-              scrub: false,
-              toggleActions: "play none none reverse",
-            }),
+          // Prevent jumps by using onUpdate
+          onUpdate: (self) => {
+            // Ensure smooth progression without jumps
+            const progress = self.progress;
+            if (progress >= 0.98) {
+              // Lock to final state to prevent jumps
+              gsap.set(chartSelector, { height: `${maxHeight}px` });
+              gsap.set(selector, { innerText: value });
+            }
+          },
+          // Use pin spacer to prevent layout shifts
+          ...(isMobile && {
+            anticipatePin: 1,
+            refreshPriority: 1,
+          }),
           // markers: true,
         },
       });
@@ -88,13 +99,14 @@ const Chart = () => {
       // Store the ScrollTrigger instance
       chartScrollTriggers.push(tl.scrollTrigger);
 
-      // Animate counter number
+      // Animate counter number with easing that matches height
       tl.to(
         selector,
         {
           innerText: value,
-          duration: isMobile ? 1.5 : 2,
+          duration: 1,
           snap: { innerText: 1 },
+          ease: "power2.out",
         },
         0,
       ); // Start at time 0
@@ -104,10 +116,11 @@ const Chart = () => {
         chartSelector,
         {
           height: `${maxHeight}px`,
-          duration: isMobile ? 1.5 : 2,
+          duration: 1,
           ease: "power2.out",
-          // Ensure no width changes
-          width: "auto",
+          // Explicitly prevent any other property changes
+          transformOrigin: "bottom",
+          force3D: true, // Use GPU acceleration for smoother animation
         },
         0,
       ); // Start at time 0 (same time as counter)
@@ -124,7 +137,7 @@ const Chart = () => {
 
   return (
     <section
-      // @ts-ignore
+    // @ts-ignore
       ref={containerRef}
       className={`chart-container font-NHD relative flex w-full flex-col overflow-hidden bg-black px-4 py-10 text-white md:px-10 ${
         isMobile ? "min-h-[80vh] pb-10" : "min-h-screen pb-20"
@@ -159,9 +172,12 @@ const Chart = () => {
         <div
           className="chart1 flex w-1/3 flex-col justify-end rounded-sm bg-orange-400 p-2 md:p-4"
           style={{
-            // Prevent width changes with fixed positioning
+            // Prevent layout shifts and jumps
             boxSizing: "border-box",
             flexShrink: 0,
+            overflow: "hidden",
+            willChange: "height",
+            transform: "translateZ(0)", // Force GPU layer
             ...(isMobile && { maxWidth: "calc(33.333% - 4px)" }),
           }}
         >
@@ -176,6 +192,9 @@ const Chart = () => {
           style={{
             boxSizing: "border-box",
             flexShrink: 0,
+            overflow: "hidden",
+            willChange: "height",
+            transform: "translateZ(0)", // Force GPU layer
             ...(isMobile && { maxWidth: "calc(33.333% - 4px)" }),
           }}
         >
@@ -190,6 +209,9 @@ const Chart = () => {
           style={{
             boxSizing: "border-box",
             flexShrink: 0,
+            overflow: "hidden",
+            willChange: "height",
+            transform: "translateZ(0)", // Force GPU layer
             ...(isMobile && { maxWidth: "calc(33.333% - 4px)" }),
           }}
         >
