@@ -18,7 +18,7 @@ function Card1() {
           </Copy>
           <div className="p">
             <Copy>
-              <p className="w-full text-base md:w-1/3 md:text-xl">
+              <p className="w-full text-lg md:w-1/3 md:text-xl">
                 Creating an ordered timeline of events, staffing the project and
                 determining the necessary materials and equipments.
               </p>
@@ -49,7 +49,7 @@ function Card2() {
           </Copy>
           <div className="p">
             <Copy>
-              <p className="w-full text-base md:w-1/3 md:text-xl">
+              <p className="w-full text-lg md:w-1/3 md:text-xl">
                 We work hard to develop innovative and cost-effective solutions
                 for our client both public and private.
               </p>
@@ -80,7 +80,7 @@ function Card3() {
           </Copy>
           <div className="p">
             <Copy>
-              <p className="w-full text-base md:w-1/3 md:text-xl">
+              <p className="w-full text-lg md:w-1/3 md:text-xl">
                 We emphasize on a broad spectrum of services, competences,
                 processes and tools to assure the built environment will perform
                 the functions for which a facility was designed and constructed.
@@ -112,7 +112,7 @@ function Card4() {
           </Copy>
           <div className="p">
             <Copy>
-              <p className="w-full text-base md:w-1/3 md:text-xl">
+              <p className="w-full text-lg md:w-1/3 md:text-xl">
                 Innovative execution methods to deliver safe, high quality
                 project is the foundation of our business and success.
               </p>
@@ -297,7 +297,7 @@ export default function HomeCard() {
         </div>
         <div className="right mt-6 md:mt-0 md:w-1/2">
           <Copy>
-            <p className="mt-6 text-base md:mt-14 md:w-1/2 md:text-lg lg:text-xl">
+            <p className="mt-6 text-lg md:mt-14 md:w-1/2 md:text-lg lg:text-xl">
               MIMCO est un groupe d'investissement spécialisé dans l'immobilier
               value add paneuropéen. Le groupe structure et gère des véhicules
               d'investissement{" "}
@@ -334,7 +334,7 @@ export default function HomeCard() {
           </div>
           <div className="right mt-6 md:mt-0 md:w-1/2">
             <Copy>
-              <p className="mt-8 w-full md:mt-14">
+              <p className="mt-8 w-full text-lg md:mt-14 md:text-xl">
                 MIMCO est un groupe d'investissement spécialisé dans
                 l'immobilier value add paneuropéen. Le groupe structure et gère
                 des véhicules d'investissement. <br /> MIMCO est un groupe
@@ -343,7 +343,7 @@ export default function HomeCard() {
                 d'investissement{" "}
               </p>
               <br />
-              <p className="w-full">
+              <p className="w-full text-lg md:text-xl">
                 MIMCO est un groupe d'investissement spécialisé dans
                 l'immobilier value add paneuropéen. Le groupe structure et gère
                 des véhicules d'investissement{" "}
