@@ -79,7 +79,7 @@ const Chart = () => {
             }
           },
           // Enable markers to debug positioning
-          markers: true,
+          //   markers: true,
         },
       });
 

@@ -302,7 +302,7 @@ const Home = () => {
 
         {/* Team Section */}
 
-        <section className="relative flex w-full overflow-hidden px-4 pt-24 pb-24 md:px-10">
+        <section className="relative flex w-full overflow-hidden px-4 pt-10 pb-24 md:px-10 md:pt-20">
           <div className="flex w-full flex-col gap-4 text-black">
             <Copy>
               <h4 className="text-orange-400">We're here to help.</h4>

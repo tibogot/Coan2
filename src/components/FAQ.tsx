@@ -95,7 +95,7 @@ const FAQ = () => {
   }, [activeId]);
 
   return (
-    <div className="mx-auto px-4 py-40 md:px-10">
+    <div className="mx-auto px-4 py-14 md:px-10 md:py-40">
       <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
         {/* Left Section */}
         <div className="md:w-1/2">
