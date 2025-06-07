@@ -8,7 +8,7 @@ import FAQ from "../components/FAQ";
 // import Counter from "../components/Counter2";
 import Copy from "../components/Copy1";
 import GridComponent from "../components/GridComponent2";
-import HomeCard from "../components/CardsScroll12";
+import HomeCard from "../components/CardsScroll13";
 import { useGSAP } from "@gsap/react";
 import Chart from "../components/Chart2";
 // import CounterDark from "../components/CounterDark";
