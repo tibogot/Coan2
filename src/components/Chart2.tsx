@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import Copy from "./Copy1";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,55 +10,48 @@ gsap.registerPlugin(useGSAP);
 const Chart = () => {
   //@ts-ignore
   const containerRef = useRef();
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect mobile screen size
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   useGSAP(() => {
-    // Refresh ScrollTrigger to sync with Lenis
+    // Force ScrollTrigger refresh for Lenis compatibility
     ScrollTrigger.refresh();
+
+    // Additional refresh after a short delay to ensure Lenis is ready
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    const isMobile = window.innerWidth < 768;
 
     const counters = [
       {
         selector: ".counter1",
         chartSelector: ".chart1",
         value: 600,
-        maxHeight: isMobile ? 200 : 300, // Reduced height for mobile
+        maxHeight: isMobile ? 100 : 300, // Shorter
       },
       {
         selector: ".counter2",
         chartSelector: ".chart2",
         value: 28,
-        maxHeight: isMobile ? 250 : 500, // Reduced height for mobile
+        maxHeight: isMobile ? 180 : 500, // Tallest - much more noticeable difference
       },
       {
         selector: ".counter3",
         chartSelector: ".chart3",
         value: 460,
-        maxHeight: isMobile ? 220 : 400, // Reduced height for mobile
+        maxHeight: isMobile ? 140 : 400, // Middle height
       },
     ];
 
-    // Set initial heights - different for mobile and desktop
-    const initialHeight = isMobile ? "80px" : "120px";
+    // Set initial heights - mobile first approach
+    const initialHeight = isMobile ? "60px" : "120px";
     counters.forEach(({ chartSelector }) => {
       gsap.set(chartSelector, {
         height: initialHeight,
-        // Prevent width changes and stabilize layout
         overflow: "hidden",
-        willChange: "height", // Optimize for height changes only
-        backfaceVisibility: "hidden", // Prevent flickering
-        perspective: 1000, // Enable 3D acceleration
+        willChange: "height",
+        backfaceVisibility: "hidden",
+        perspective: 1000,
       });
     });
 
@@ -71,35 +64,29 @@ const Chart = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".chart-container",
-          // Different scroll behavior for mobile vs desktop
+          // Mobile first scroll behavior - adjusted for Lenis
           start: isMobile ? "top 80%" : "30% 80%",
-          end: isMobile ? "bottom 20%" : "top+=55% 60%",
-          scrub: isMobile ? 0.8 : 1, // Gentler scrub on mobile
+          end: isMobile ? "bottom 50%" : "top+=55% 60%",
+          scrub: isMobile ? 1 : 1,
           invalidateOnRefresh: true,
-          refreshPriority: 0,
+          refreshPriority: -1, // Lower priority to work better with Lenis
           // Prevent jumps by using onUpdate
           onUpdate: (self) => {
-            // Ensure smooth progression without jumps
             const progress = self.progress;
             if (progress >= 0.98) {
-              // Lock to final state to prevent jumps
               gsap.set(chartSelector, { height: `${maxHeight}px` });
               gsap.set(selector, { innerText: value });
             }
           },
-          // Use pin spacer to prevent layout shifts
-          ...(isMobile && {
-            anticipatePin: 1,
-            refreshPriority: 1,
-          }),
-          // markers: true,
+          // Enable markers to debug positioning
+          markers: true,
         },
       });
 
       // Store the ScrollTrigger instance
       chartScrollTriggers.push(tl.scrollTrigger);
 
-      // Animate counter number with easing that matches height
+      // Animate counter number
       tl.to(
         selector,
         {
@@ -109,7 +96,7 @@ const Chart = () => {
           ease: "power2.out",
         },
         0,
-      ); // Start at time 0
+      );
 
       // Animate bar height growth from bottom
       tl.to(
@@ -118,12 +105,11 @@ const Chart = () => {
           height: `${maxHeight}px`,
           duration: 1,
           ease: "power2.out",
-          // Explicitly prevent any other property changes
           transformOrigin: "bottom",
-          force3D: true, // Use GPU acceleration for smoother animation
+          force3D: true,
         },
         0,
-      ); // Start at time 0 (same time as counter)
+      );
     });
 
     return () => {
@@ -133,15 +119,13 @@ const Chart = () => {
         if (trigger) trigger.kill();
       });
     };
-  }, [isMobile]); // Re-run when mobile state changes
+  }, []);
 
   return (
     <section
-    // @ts-ignore
+      // @ts-ignore
       ref={containerRef}
-      className={`chart-container font-NHD relative flex w-full flex-col overflow-hidden bg-black px-4 py-10 text-white md:px-10 ${
-        isMobile ? "min-h-[80vh] pb-10" : "min-h-screen pb-20"
-      }`}
+      className="chart-container font-NHD relative flex min-h-[70vh] w-full flex-col overflow-hidden bg-black px-4 py-10 pb-10 text-white md:min-h-screen md:px-10 md:pb-20"
     >
       <div className="w-full md:flex">
         <div className="left md:w-3/4">
@@ -164,25 +148,19 @@ const Chart = () => {
       </div>
 
       {/* Chart */}
-      <div
-        className={`charts mt-10 flex w-full flex-1 items-end text-white ${
-          isMobile ? "gap-2" : "gap-4 md:gap-10"
-        }`}
-      >
+      <div className="charts mt-6 flex w-full flex-1 items-end gap-2 px-2 text-white md:mt-10 md:gap-4 md:gap-10 md:px-0">
         <div
           className="chart1 flex w-1/3 flex-col justify-end rounded-sm bg-orange-400 p-2 md:p-4"
           style={{
-            // Prevent layout shifts and jumps
             boxSizing: "border-box",
             flexShrink: 0,
             overflow: "hidden",
             willChange: "height",
-            transform: "translateZ(0)", // Force GPU layer
-            ...(isMobile && { maxWidth: "calc(33.333% - 4px)" }),
+            transform: "translateZ(0)",
           }}
         >
-          <p className="mt-2 text-sm md:mt-4 md:text-base">Metals recovery</p>
-          <h4 className="text-2xl tabular-nums md:text-4xl lg:text-9xl">
+          <p className="mt-2 text-xs md:mt-4 md:text-base">Metals recovery</p>
+          <h4 className="text-xl tabular-nums md:text-4xl lg:text-9xl">
             <span className="counter1">0</span>
             <span className="ml-1">%</span>
           </h4>
@@ -194,12 +172,11 @@ const Chart = () => {
             flexShrink: 0,
             overflow: "hidden",
             willChange: "height",
-            transform: "translateZ(0)", // Force GPU layer
-            ...(isMobile && { maxWidth: "calc(33.333% - 4px)" }),
+            transform: "translateZ(0)",
           }}
         >
-          <p className="mt-2 text-sm md:mt-4 md:text-base">Metals recovery</p>
-          <h4 className="text-2xl tabular-nums md:text-4xl lg:text-9xl">
+          <p className="mt-2 text-xs md:mt-4 md:text-base">Metals recovery</p>
+          <h4 className="text-xl tabular-nums md:text-4xl lg:text-9xl">
             <span className="counter2">0</span>
             <span className="ml-1">%</span>
           </h4>
@@ -211,12 +188,11 @@ const Chart = () => {
             flexShrink: 0,
             overflow: "hidden",
             willChange: "height",
-            transform: "translateZ(0)", // Force GPU layer
-            ...(isMobile && { maxWidth: "calc(33.333% - 4px)" }),
+            transform: "translateZ(0)",
           }}
         >
-          <p className="mt-2 text-sm md:mt-4 md:text-base">Metals recovery</p>
-          <h4 className="text-2xl tabular-nums md:text-4xl lg:text-9xl">
+          <p className="mt-2 text-xs md:mt-4 md:text-base">Metals recovery</p>
+          <h4 className="text-xl tabular-nums md:text-4xl lg:text-9xl">
             <span className="counter3">0</span>
             <span className="ml-1">%</span>
           </h4>
