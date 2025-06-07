@@ -10,40 +10,21 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ lenis }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [scrollPosition, setScrollPosition] = useState(0);
   const location = useLocation();
 
-  // Prevent body scroll when mobile menu is open
+  // Prevent body scroll when mobile menu is open - SIMPLE APPROACH
   useEffect(() => {
     if (isMenuOpen) {
-      // Store the current scroll position
-      const scrollY = window.scrollY;
-      setScrollPosition(scrollY);
-
-      // Prevent scrolling
       document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = "100%";
     } else {
-      // Restore scrolling
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-
-      // Restore scroll position using the stored value
-      window.scrollTo(0, scrollPosition);
+      document.body.style.overflow = "unset";
     }
 
-    // Cleanup function to restore scroll on unmount
+    // Cleanup
     return () => {
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
+      document.body.style.overflow = "unset";
     };
-  }, [isMenuOpen, scrollPosition]);
+  }, [isMenuOpen]);
 
   // Simple scroll detection for navbar styling
   useEffect(() => {
