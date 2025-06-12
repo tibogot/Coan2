@@ -1,4 +1,4 @@
-import Copy from "../components/Copy1";
+import Copy from "../components/Copy2";
 
 const About = () => {
   return (
@@ -6,10 +6,10 @@ const About = () => {
       <section className="font-NHD hero relative -mt-18 flex h-[100svh] w-full items-end bg-red-300 p-4 text-white md:p-10">
         <div className="absolute top-0 left-0 h-full w-full bg-[url(/about-img.webp)]"></div>
         <div className="absolute top-0 left-0 h-full w-full bg-black/10"></div>
-        <Copy>
+        <Copy isHero>
           <h1 className="max-w-4xl text-3xl font-bold">
-            Creating standout brands for startups that bring joy and leave
-            lasting impressions.
+            Engineering Excellence,Technical Innovation, and Integrated
+            Construction Solutions
           </h1>
         </Copy>
       </section>

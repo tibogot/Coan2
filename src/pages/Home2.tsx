@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProfilesTicker from "../components/ProfilesTicker2";
 import FAQ from "../components/FAQ";
 // import Counter from "../components/Counter2";
-import Copy from "../components/Copy1";
+import Copy from "../components/Copy2";
 import GridComponent from "../components/GridComponent2";
 import HomeCard from "../components/CardsScroll13";
 import { useGSAP } from "@gsap/react";
@@ -27,6 +27,7 @@ const Home = () => {
         scrub: true,
         pin: true,
         anticipatePin: 1,
+        // invalidateOnRefresh: true,
       },
     });
 
@@ -273,7 +274,7 @@ const Home = () => {
 
         {/* Grid Dots */}
 
-        <section className="w-full flex flex-col-reverse md:flex-row bg-black px-4 py-20 text-white md:flex md:px-10">
+        <section className="flex w-full flex-col-reverse bg-black px-4 py-20 text-white md:flex md:flex-row md:px-10">
           <GridComponent />
           <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2 md:px-10">
             <Copy>

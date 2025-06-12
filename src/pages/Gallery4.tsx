@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import Copy from "../components/Copy1";
+import Copy from "../components/Copy2";
 
 const Gallery = () => {
   const images = Array.from(
@@ -97,7 +97,7 @@ const Gallery = () => {
       <section className="hero font-NHD relative -mt-18 flex h-[100svh] w-full items-end bg-red-300 p-4 text-white md:p-10">
         <div className="absolute top-0 left-0 h-full w-full bg-[url(/gallery-img.webp)]"></div>
         <div className="absolute top-0 left-0 h-full w-full bg-black/10"></div>
-        <Copy>
+        <Copy isHero>
           <h1 className="max-w-4xl text-3xl font-bold">
             Creating standout brands for startups that bring joy and leave
             lasting impressions.

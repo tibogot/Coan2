@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ lenis }) => {
     <>
       {/* Main Navbar */}
       <nav
-        className={`sticky top-0 z-50 h-18 px-4 transition-all duration-300 md:px-10 ${
+        className={`sticky top-0 z-50 h-18 px-4 transition-all duration-300 select-none md:px-10 ${
           isDarkMode ? "bg-transparent" : "bg-white"
         }`}
       >
