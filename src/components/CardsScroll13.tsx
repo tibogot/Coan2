@@ -338,9 +338,9 @@ export default function HomeCard() {
         <div className="center-banner mt-8 rounded-sm bg-amber-400 md:mt-16">
           <div className="imgwrapper relative flex h-[300px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/grid-images/image-4.webp)] bg-cover bg-center text-white md:h-[400px]">
             <div className="flex flex-col items-center justify-center px-4 text-center">
-              <h2 className="text-xl md:w-3/4 md:text-2xl lg:text-3xl">
+              <h5 className="text-3xl md:w-3/4 md:text-5xl">
                 Nous cultivons notre passion au travers de projets audacieux.
-              </h2>{" "}
+              </h5>{" "}
               <Button className="mt-6 md:mt-10" variant="withArrow">
                 Learn more
               </Button>

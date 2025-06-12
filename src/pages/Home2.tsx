@@ -273,12 +273,12 @@ const Home = () => {
 
         {/* Grid Dots */}
 
-        <section className="w-full flex-row bg-black px-4 py-20 text-white md:flex md:px-10">
+        <section className="w-full flex flex-col-reverse md:flex-row bg-black px-4 py-20 text-white md:flex md:px-10">
           <GridComponent />
           <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2 md:px-10">
             <Copy>
               <h4 className="">Leading the way</h4>
-              <h2 className="mt-4">
+              <h2 className="mt-4 text-balance">
                 A construction <span className="text-orange-400">company,</span>
                 <br /> offering integrated
                 <span className="text-orange-400">solution</span> and related

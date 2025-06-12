@@ -148,9 +148,10 @@ const Chart = () => {
       </div>
 
       {/* Chart */}
-      <div className="charts mt-6 flex w-full flex-1 items-end gap-2 px-2 text-white md:mt-10 md:gap-4 md:gap-10 md:px-0">
+      <div className="charts mt-6 flex w-full flex-1 items-end gap-4 text-white md:mt-10">
+        {" "}
         <div
-          className="chart1 flex w-1/3 flex-col justify-end rounded-sm bg-orange-400 p-2 md:p-4"
+          className="chart1 flex-1 flex-col justify-end rounded-sm bg-orange-400 p-2 md:p-4"
           style={{
             boxSizing: "border-box",
             flexShrink: 0,
@@ -166,7 +167,7 @@ const Chart = () => {
           </h4>
         </div>
         <div
-          className="chart2 flex w-1/3 flex-col justify-end rounded-sm bg-orange-400 p-2 md:p-4"
+          className="chart2 flex-1 flex-col justify-end rounded-sm bg-orange-400 p-2 md:p-4"
           style={{
             boxSizing: "border-box",
             flexShrink: 0,
@@ -182,7 +183,7 @@ const Chart = () => {
           </h4>
         </div>
         <div
-          className="chart3 flex w-1/3 flex-col justify-end rounded-sm bg-orange-400 p-2 md:p-4"
+          className="chart3 flex-1 flex-col justify-end rounded-sm bg-orange-400 p-2 md:p-4"
           style={{
             boxSizing: "border-box",
             flexShrink: 0,
