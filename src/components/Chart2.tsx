@@ -26,19 +26,19 @@ const Chart = () => {
       {
         selector: ".counter1",
         chartSelector: ".chart1",
-        value: 600,
+        value: 60,
         maxHeight: isMobile ? 100 : 300, // Shorter
       },
       {
         selector: ".counter2",
         chartSelector: ".chart2",
-        value: 28,
+        value: 34,
         maxHeight: isMobile ? 180 : 500, // Tallest - much more noticeable difference
       },
       {
         selector: ".counter3",
         chartSelector: ".chart3",
-        value: 460,
+        value: 98,
         maxHeight: isMobile ? 140 : 400, // Middle height
       },
     ];
@@ -160,10 +160,12 @@ const Chart = () => {
             transform: "translateZ(0)",
           }}
         >
-          <p className="mt-2 text-xs md:mt-4 md:text-base">Metals recovery</p>
+          <p className="mt-2 text-xs md:mt-4 md:text-base">
+            Completed projects
+          </p>
           <h4 className="text-xl tabular-nums md:text-4xl lg:text-9xl">
             <span className="counter1">0</span>
-            <span className="ml-1">%</span>
+            <span className="ml-1">+</span>
           </h4>
         </div>
         <div
@@ -176,10 +178,12 @@ const Chart = () => {
             transform: "translateZ(0)",
           }}
         >
-          <p className="mt-2 text-xs md:mt-4 md:text-base">Metals recovery</p>
+          <p className="mt-2 text-xs md:mt-4 md:text-base">
+            Years of experience
+          </p>
           <h4 className="text-xl tabular-nums md:text-4xl lg:text-9xl">
             <span className="counter2">0</span>
-            <span className="ml-1">%</span>
+            <span className="ml-1">+</span>
           </h4>
         </div>
         <div
@@ -192,7 +196,9 @@ const Chart = () => {
             transform: "translateZ(0)",
           }}
         >
-          <p className="mt-2 text-xs md:mt-4 md:text-base">Metals recovery</p>
+          <p className="mt-2 text-xs md:mt-4 md:text-base">
+            Clients satisfaction
+          </p>
           <h4 className="text-xl tabular-nums md:text-4xl lg:text-9xl">
             <span className="counter3">0</span>
             <span className="ml-1">%</span>
