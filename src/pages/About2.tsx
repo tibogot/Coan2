@@ -1,5 +1,5 @@
 import Copy from "../components/Copy2";
-import Polar from "../components/Polar";
+// import Polar from "../components/Polar";
 import ProfilesGrid from "../components/ProfileGrid";
 // import Button from "../components/Buttons";
 
