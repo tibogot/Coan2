@@ -137,7 +137,7 @@ const Chart = () => {
         </div>
         <div className="right md:w-1/2">
           <Copy>
-            <p className="mt-14 text-xl text-balance md:w-3/4">
+            <p className="mt-14 text-xl text-balance md:mt-0 md:w-3/4">
               MIMCO est un groupe d'investissement spécialisé dans l'immobilier
               value add paneuropéen. Le groupe structure et gère des véhicules
               d'investissement innovants au service d'une clientèle

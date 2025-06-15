@@ -137,9 +137,7 @@ const Home = () => {
           <div className="mt-14 flex-row md:mt-30 md:flex">
             <div className="w-full md:w-1/2">
               <Copy>
-                <h3 className="w-full md:w-1/2">
-                  State-of-The-Art Construction Methods and Technologies
-                </h3>
+                <h3 className="w-full md:w-1/2">A Tradition Of Excellence</h3>
               </Copy>
             </div>
             <Copy>
@@ -191,7 +189,7 @@ const Home = () => {
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 px-4 text-center text-white">
                 <h2>
                   A construction
-                  <span className="text-orange-400">company</span>
+                  <span className="text-orange-400"> company</span>
                   <br /> offering integrated{" "}
                   <span className="text-orange-400">solution</span>
                 </h2>
@@ -244,17 +242,21 @@ const Home = () => {
         {/* Pre-black Section */}
 
         <section className="pre-black px-4 py-10 md:px-10 md:pb-30">
-          <h4 className="text-orange-400">About us</h4>
+          <h4 className="text-orange-400">Our vision</h4>
 
           <div className="wrapper w-full md:flex">
             <div className="left flex flex-col justify-between md:w-1/2">
               <Copy>
-                <h2 className="mt-4 w-full md:w-3/4">Consultative</h2>
+                <h2 className="mt-4 w-full md:w-3/4">
+                  {" "}
+                  To be the most trusted and innovative construction company in
+                  West Africa
+                </h2>
               </Copy>
               <Copy>
                 <p className="mt-10 w-full text-xl md:w-1/2">
-                  MIMCO est un groupe d’investissement spécialisé dans
-                  l'immobilier value add paneuropéen.
+                  Setting new standards for quality, sustainability, and
+                  technological advancement in infrastructure development.
                 </p>
               </Copy>
             </div>
@@ -280,17 +282,13 @@ const Home = () => {
             <Copy>
               <h4 className="">Leading the way</h4>
               <h2 className="mt-4 text-balance">
-                A construction <span className="text-orange-400">company,</span>
-                <br /> offering integrated
-                <span className="text-orange-400">solution</span> and related
-                services.
+                The <span className="text-orange-400">principles</span> that
+                drive our <span className="text-orange-400">excellence.</span>
               </h2>
               <p className="mt-10 w-full pb-10 text-xl text-balance md:w-3/4">
-                MIMCO est un groupe d’investissement spécialisé dans
-                l'immobilier value add paneuropéen. Le groupe structure et gère
-                des véhicules d’investissement innovants au service d’une
-                clientèle institutionnelle ainsi que de family offices et
-                banques privées.
+                Excellence in execution, we maintain unwavering commitment to
+                delivering projects that exceed expectations in quality,
+                timeline, and budget management.
               </p>
             </Copy>
             <Button className="mt-10" variant="withArrow">

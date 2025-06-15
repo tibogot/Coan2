@@ -11,7 +11,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function Card1() {
   return (
     <div className="card relative w-full" id="card-1">
-      <div className="card-inner relative flex h-[400px] w-full flex-col bg-gray-200 p-4 md:h-[400px] md:flex-row md:p-10">
+      <div className="card-inner relative flex h-[400px] w-full flex-col bg-orange-400 p-4 text-white md:h-[400px] md:flex-row md:p-10">
         <div className="left mb-4 flex w-full flex-col justify-between md:mb-0 md:w-3/4">
           <Copy>
             <h6 className="text-lg md:text-base">Planning</h6>
@@ -42,7 +42,7 @@ function Card1() {
 function Card2() {
   return (
     <div className="card relative w-full" id="card-2">
-      <div className="card-inner relative flex h-[400px] w-full flex-col bg-black p-4 text-white md:h-[400px] md:flex-row md:p-10">
+      <div className="card-inner relative flex h-[400px] w-full flex-col bg-orange-400 p-4 text-white md:h-[400px] md:flex-row md:p-10">
         <div className="left mb-4 flex w-full flex-col justify-between md:mb-0 md:w-3/4">
           <Copy>
             <h6 className="text-lg md:text-base">Design</h6>
@@ -105,7 +105,7 @@ function Card3() {
 function Card4() {
   return (
     <div className="card relative w-full" id="card-4">
-      <div className="card-inner relative flex h-[400px] w-full flex-col bg-orange-500 p-4 text-white md:h-[400px] md:flex-row md:p-10">
+      <div className="card-inner relative flex h-[400px] w-full flex-col bg-orange-400 p-4 text-white md:h-[400px] md:flex-row md:p-10">
         <div className="left mb-4 flex w-full flex-col justify-between md:mb-0 md:w-3/4">
           <Copy>
             <h2 className="text-xl md:text-2xl">Construction</h2>
@@ -281,12 +281,11 @@ export default function HomeCard() {
         </div>
         <div className="right mt-6 md:mt-0 md:w-1/2">
           <Copy>
-            <p className="mt-6 text-lg text-balance md:mt-14 md:w-3/4 md:text-xl">
-              COAN West Africa Limited offers a complete spectrum of engineering
-              and construction services designed to meet the diverse
-              infrastructure needs of modern Nigeria. Our multidisciplinary
-              approach ensures seamless project delivery from conception to
-              completion.
+            <p className="mt-6 text-lg md:mt-14 md:w-1/2 md:text-lg lg:text-xl">
+              Transform your landscape with our comprehensive civil engineering
+              solutions. From foundation design to complex structural systems,
+              our civil engineers handle projects of all scales with meticulous
+              attention to detail.
             </p>
           </Copy>
         </div>
@@ -302,11 +301,9 @@ export default function HomeCard() {
       <section className="outro min-h-[40vh] px-4 py-10 md:min-h-[50vh] md:px-10 md:pb-30">
         <div className="md:w-3/4">
           <Copy>
-            <h4 className="text-base text-orange-400 md:text-lg">
-              Our mission
-            </h4>
-            <h2 className="mt-4 w-full text-2xl md:w-3/4 md:text-3xl lg:text-4xl">
-              Transforming Communities Through Superior Infrastructure
+            <h4 className="text-base text-orange-400 md:text-lg">Services</h4>
+            <h2 className="mt-4 w-full text-2xl md:text-3xl lg:text-4xl">
+              A consultative approach
             </h2>
           </Copy>
         </div>
@@ -314,36 +311,36 @@ export default function HomeCard() {
           <div className="left md:w-3/4">
             <Copy>
               <p className="mt-8 md:mt-14 md:w-1/2">
-                At COAN West Africa Limited, our mission extends beyond
-                construction – we are nation builders committed to creating
-                sustainable infrastructure that enhances quality of life,
-                promotes economic development, and connects communities across
-                Nigeria. We believe that every road we build, every bridge we
-                construct, and every infrastructure project we deliver
-                contributes to the greater vision of a modern, prosperous
-                Nigeria.
+                MIMCO est un groupe d'investissement spécialisé dans
+                l'immobilier value add paneuropéen. Le groupe structure et gère
+                des véhicules d'investissement{" "}
               </p>
             </Copy>
           </div>
           <div className="right mt-6 md:mt-0 md:w-1/2">
-            {/* <Copy>
+            <Copy>
               <p className="mt-8 w-full text-lg md:mt-14 md:text-xl">
-                To be the most trusted and innovative construction company in
-                West Africa, setting new standards for quality, sustainability,
-                and technological advancement in infrastructure development. We
-                envision a future where our projects serve as benchmarks for
-                excellence and contribute significantly to regional economic
-                integration and development.
+                MIMCO est un groupe d'investissement spécialisé dans
+                l'immobilier value add paneuropéen. Le groupe structure et gère
+                des véhicules d'investissement. <br /> MIMCO est un groupe
+                d'investissement spécialisé dans l'immobilier value add
+                paneuropéen. Le groupe structure et gère des véhicules
+                d'investissement{" "}
               </p>
               <br />
-            </Copy> */}
+              <p className="w-full text-lg md:text-xl">
+                MIMCO est un groupe d'investissement spécialisé dans
+                l'immobilier value add paneuropéen. Le groupe structure et gère
+                des véhicules d'investissement{" "}
+              </p>
+            </Copy>
           </div>
         </div>
         <div className="center-banner mt-8 rounded-sm bg-amber-400 md:mt-16">
           <div className="imgwrapper relative flex h-[300px] w-full items-center justify-center rounded-sm bg-amber-200 bg-[url(/grid-images/image-4.webp)] bg-cover bg-center text-white md:h-[400px]">
             <div className="flex flex-col items-center justify-center px-4 text-center">
               <h5 className="text-3xl md:w-3/4 md:text-5xl">
-                Leading West Africa's Infrastructure Revolution
+                Nous cultivons notre passion au travers de projets audacieux.
               </h5>{" "}
               <Button className="mt-6 md:mt-10" variant="withArrow">
                 Learn more
