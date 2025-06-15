@@ -188,10 +188,9 @@ const Home = () => {
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 px-4 text-center text-white">
                 <h2>
-                  A construction
-                  <span className="text-orange-400"> company</span>
-                  <br /> offering integrated{" "}
-                  <span className="text-orange-400">solution</span>
+                  Offering
+                  <span className="text-orange-400"> integrated</span>
+                  <br /> solutions
                 </h2>
               </div>
             </div>
