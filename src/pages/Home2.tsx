@@ -113,9 +113,11 @@ const Home = () => {
                   className="h-auto w-full"
                 />
               </div>
-              <p className="mx-2 text-base md:text-xl">
-                Construction Company West Africa
-              </p>
+              <Copy isHero>
+                <p className="mx-2 text-base md:text-xl">
+                  Construction Company West Africa
+                </p>
+              </Copy>
             </div>
           </div>
         </section>
@@ -190,7 +192,7 @@ const Home = () => {
                 <h2>
                   Offering
                   <span className="text-orange-400"> integrated</span>
-                  <br /> solutions
+                  <br /> services
                 </h2>
               </div>
             </div>
@@ -222,11 +224,11 @@ const Home = () => {
               style={{ clipPath: "inset(100% 0 0 0)" }}
             >
               <img
-                src="./20210304_102705-2-scaled.jpg"
+                src="./grid-images/image-2.webp"
                 alt="Section 3"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30 px-4 text-center text-white">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 px-4 text-center text-white">
                 <h2>
                   Building the <span className="text-orange-400">future</span>
                   <br /> together
@@ -241,7 +243,9 @@ const Home = () => {
         {/* Pre-black Section */}
 
         <section className="pre-black px-4 py-10 md:px-10 md:pb-30">
-          <h4 className="text-orange-400">Our vision</h4>
+          <Copy>
+            <h4 className="text-orange-400">Our vision</h4>
+          </Copy>
 
           <div className="wrapper w-full md:flex">
             <div className="left flex flex-col justify-between md:w-1/2">
@@ -278,18 +282,19 @@ const Home = () => {
         <section className="flex w-full flex-col-reverse bg-black px-4 py-20 text-white md:flex md:flex-row md:px-10">
           <GridComponent />
           <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2 md:px-10">
-            <Copy>
-              <h4 className="">Leading the way</h4>
-              <h2 className="mt-4 text-balance">
-                The <span className="text-orange-400">principles</span> that
-                drive our <span className="text-orange-400">excellence.</span>
-              </h2>
-              <p className="mt-10 w-full pb-10 text-xl text-balance md:w-3/4">
-                Excellence in execution, we maintain unwavering commitment to
-                delivering projects that exceed expectations in quality,
-                timeline, and budget management.
-              </p>
-            </Copy>
+            <h4 className="">Engineering Excellence</h4>
+            <h2 className="mt-4 text-balance">
+              Where <span className="text-orange-400">Innovation</span> Meets{" "}
+              <span className="text-orange-400">Precision</span>
+            </h2>
+            <p className="mt-10 w-full pb-10 text-xl md:w-1/2">
+              With over 18 years of expertise in civil and electrical
+              engineering, we deliver transformative infrastructure projects
+              that shape tomorrow's communities. <br /> Our commitment to
+              technical excellence and sustainable solutions sets new industry
+              standards.
+            </p>
+
             <Button className="mt-10" variant="withArrow">
               Learn more
             </Button>

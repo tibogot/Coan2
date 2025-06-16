@@ -128,20 +128,21 @@ const Chart = () => {
       className="chart-container font-NHD relative flex min-h-[70vh] w-full flex-col overflow-hidden bg-black px-4 py-10 pb-10 text-white md:min-h-screen md:px-10 md:pb-20"
     >
       <div className="w-full md:flex">
-        <div className="left md:w-3/4">
+        <div className="left md:w-1/2">
           <Copy>
             <h2 className="md:w-3/4">
-              Over 18 years grinding alongside founders with a chip.
+              Building Africa's Future Through Engineering Excellence
             </h2>
           </Copy>
         </div>
         <div className="right md:w-1/2">
           <Copy>
-            <p className="mt-14 text-xl text-balance md:mt-0 md:w-3/4">
-              MIMCO est un groupe d'investissement spécialisé dans l'immobilier
-              value add paneuropéen. Le groupe structure et gère des véhicules
-              d'investissement innovants au service d'une clientèle
-              institutionnelle ainsi que de family offices et banques privées.
+            <p className="mt-14 text-xl text-balance md:mt-0 md:w-3/4 md:px-10">
+              Since 2006, COAN West Africa has delivered groundbreaking civil
+              and electrical engineering solutions across the continent. <br />{" "}
+              Our track record of successful infrastructure projects
+              demonstrates our commitment to quality, innovation, and
+              sustainable development.
             </p>
           </Copy>
         </div>

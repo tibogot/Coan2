@@ -100,7 +100,7 @@ const FAQ = () => {
         {/* Left Section */}
         <div className="md:w-1/2">
           <Copy>
-            <h4 className="text-lg text-orange-500">We're here to help.</h4>
+            <h4 className="text-lg text-orange-500">FAQ</h4>
             <h2 className="mt-4 text-black">Got Questions?</h2>
           </Copy>
         </div>

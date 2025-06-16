@@ -76,7 +76,7 @@ function Card3() {
       <div className="card-inner relative flex h-[400px] w-full flex-col bg-orange-400 p-4 text-white md:h-[400px] md:flex-row md:p-10">
         <div className="left mb-4 flex w-full flex-col justify-between md:mb-0 md:w-3/4">
           <Copy>
-            <h2 className="text-xl md:text-2xl">Operation & Maintenance</h2>
+            <h2 className="text-xl md:text-2xl">Operation</h2>
           </Copy>
           <div className="p">
             <Copy>
@@ -318,9 +318,6 @@ export default function HomeCard() {
                 construction – we are nation builders committed to creating
                 sustainable infrastructure that enhances quality of life,
                 promotes economic development, and connects communities across
-                Nigeria. We believe that every road we build, every bridge we
-                construct, and every infrastructure project we deliver
-                contributes to the greater vision of a modern, prosperous
                 Nigeria.
               </p>
             </Copy>

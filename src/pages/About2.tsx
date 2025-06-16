@@ -43,7 +43,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="font-NHD px-4 pt-10 pb-14 md:px-10 md:pb-30">
+      {/* <section className="font-NHD px-4 pt-10 pb-14 md:px-10 md:pb-30">
         <div className="md:flex">
           <div className="left md:w-1/2">
             <Copy>
@@ -63,13 +63,13 @@ const About = () => {
           delivering some of the largest and most complex construction
           engineering projects in Africa.
         </p>
-      </section>
+      </section> */}
 
       <section className="font-NHD relative flex w-full overflow-hidden px-4 pt-10 pb-24 md:px-10 md:pt-20">
         <div className="flex w-full flex-col gap-4 text-black">
           <Copy>
             <h4 className="text-orange-400">We're here to help.</h4>
-            <h2 className="mt-4">Discover our team</h2>
+            <h2 className="mt-4">Meet Our Management Team</h2>
             <p className="mt-14 w-full text-xl md:w-1/4">
               COAN's professional employees play an integral role in
               successfully delivering some of the largest and most complex
@@ -84,7 +84,6 @@ const About = () => {
       <section className="font-NHD relative flex w-full overflow-hidden px-4 pt-10 pb-24 md:px-10 md:pt-20">
         <div className="flex w-full flex-col gap-4 text-black">
           <Copy>
-            <h4 className="text-orange-400">We're here to help.</h4>
             <h2 className="mt-4">Discover our team</h2>
             <p className="mt-14 w-full text-xl md:w-1/4">
               COAN's professional employees play an integral role in

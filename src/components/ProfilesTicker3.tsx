@@ -55,6 +55,22 @@ const PROFILES: ProfileType[] = [
       "https://coanwaltd.com/wp-content/uploads/2018/12/Mr-Ugwu-Osita-Sabastine.jpg",
     countries: ["UK"],
   },
+  {
+    id: 6,
+    name: "Akubor George",
+    title: "Secretary",
+    image:
+      "https://coanwaltd.com/wp-content/uploads/2022/04/George-Edited.jpg ",
+    countries: ["UK"],
+  },
+  {
+    id: 7,
+    name: "Mr Osagie Omoragbon",
+    title: "Admin Manager",
+    image:
+      "https://coanwaltd.com/wp-content/uploads/2018/12/Mr-Omoragbon-Paul-Osagie-768x1024.jpg ",
+    countries: ["UK"],
+  },
 ];
 
 const ProfilesTicker = () => {
