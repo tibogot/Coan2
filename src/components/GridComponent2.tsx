@@ -142,7 +142,7 @@ const GridComponent = () => {
   };
 
   return (
-    <div className="relative flex h-[400px] md:h-[600px] w-full items-center justify-center overflow-hidden select-none md:w-1/2">
+    <div className="relative mt-10 flex h-[400px] w-full items-center justify-center overflow-hidden select-none md:mt-0 md:h-[600px] md:w-1/2">
       <div
         ref={gridRef}
         className="relative h-full w-full overflow-hidden"
