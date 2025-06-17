@@ -280,7 +280,7 @@ const Home = () => {
 
         {/* Grid Dots */}
 
-        <section className="flex w-full flex-col-reverse bg-black px-4 py-20 text-white md:flex md:flex-row md:px-10">
+        <section className="flex w-full flex-col-reverse bg-black px-4 py-10 text-white md:flex md:flex-row md:px-10 md:py-20">
           <GridComponent />
           <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2 md:px-10">
             <h4 className="">Engineering Excellence</h4>
