@@ -342,9 +342,11 @@ export default function HomeCard() {
               <h5 className="text-3xl md:w-3/4 md:text-5xl">
                 Leading West Africa's Infrastructure Revolution
               </h5>{" "}
-              <Button className="mt-6 md:mt-10" variant="withArrow">
-                Learn more
-              </Button>
+              <a href="/contact">
+                <Button className="mt-6 md:mt-10" variant="withArrow">
+                  Contact us
+                </Button>
+              </a>
             </div>
           </div>
         </div>

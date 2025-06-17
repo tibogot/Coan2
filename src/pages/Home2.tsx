@@ -284,17 +284,21 @@ const Home = () => {
           <GridComponent />
           <div className="flex w-full flex-col items-start justify-start py-4 md:w-1/2 md:px-10">
             <h4 className="">Engineering Excellence</h4>
-            <h2 className="mt-4 text-balance">
-              Where <span className="text-orange-400">Innovation</span> Meets{" "}
-              <span className="text-orange-400">Precision</span>
-            </h2>
-            <p className="mt-10 w-full pb-10 text-xl md:w-1/2">
-              With over 18 years of expertise in civil and electrical
-              engineering, we deliver transformative infrastructure projects
-              that shape tomorrow's communities. <br /> Our commitment to
-              technical excellence and sustainable solutions sets new industry
-              standards.
-            </p>
+            <Copy>
+              <h2 className="mt-4 text-balance">
+                Where <span className="text-orange-400">Innovation</span> Meets{" "}
+                <span className="text-orange-400">Precision</span>
+              </h2>
+            </Copy>
+            <Copy delay={0.2}>
+              <p className="mt-10 w-full pb-10 text-xl md:w-1/2">
+                With over 18 years of expertise in civil and electrical
+                engineering, we deliver transformative infrastructure projects
+                that shape tomorrow's communities. <br /> Our commitment to
+                technical excellence and sustainable solutions sets new industry
+                standards.
+              </p>
+            </Copy>
 
             <Button className="mt-10" variant="withArrow">
               Learn more
@@ -330,7 +334,6 @@ const Home = () => {
 
         <section className="font-NHD relative h-[100svh] w-full overflow-hidden">
           <div className="relative flex h-full items-center justify-center bg-[url('https://images.unsplash.com/photo-1710582307396-5ca7b4390aa8?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
-            {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="w-1/4">
               <img
@@ -340,12 +343,12 @@ const Home = () => {
               />
             </div>
 
-            {/* Text Container */}
             <div className="absolute top-20 z-10 flex w-full justify-start px-4 text-white md:px-10">
               <Copy>
                 <h2 className="">
-                  Building the Future with Precision
-                  <br />& Expertise.
+                  Building the Future with
+                  <br />
+                  Precision & Expertise.
                 </h2>
               </Copy>
             </div>
