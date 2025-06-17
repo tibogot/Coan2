@@ -1,185 +1,179 @@
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
+import Copy from "../components/Copy2";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-function Card1() {
+const Contact = () => {
   return (
-    <div className="card relative w-full" id="card-1">
-      <div className="card-inner relative w-full bg-purple-200 p-8">
-        <div className="flex flex-col gap-8 md:flex-row md:gap-16">
-          <div className="card-content flex-grow md:w-2/3">
-            <h1 className="mb-4 text-2xl font-bold">Inspiration Engine</h1>
-            <p>Ignite creativity with clarity, passion, and purpose.</p>
-          </div>
-          <div className="card-img aspect-video overflow-hidden rounded-xl md:w-1/3">
-            <img
-              src="./truck.png"
-              alt="Inspiration Engine"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Card2() {
-  return (
-    <div className="card relative w-full" id="card-2">
-      <div className="card-inner relative w-full bg-white p-8">
-        <div className="flex flex-col gap-8 md:flex-row md:gap-16">
-          <div className="card-content flex-grow md:w-2/3">
-            <h1 className="mb-4 text-2xl font-bold">Design Pulse</h1>
-            <p>Crafting digital elegance through visual storytelling.</p>
-          </div>
-          <div className="card-img aspect-video overflow-hidden rounded-xl md:w-1/3">
-            <img
-              src="./truck.png"
-              alt="Design Pulse"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Card3() {
-  return (
-    <div className="card relative w-full" id="card-3">
-      <div className="card-inner relative w-full bg-yellow-300 p-8">
-        <div className="flex flex-col gap-8 md:flex-row md:gap-16">
-          <div className="card-content flex-grow md:w-2/3">
-            <h1 className="mb-4 text-2xl font-bold">Presence Online</h1>
-            <p>Your story deserves a spotlight on every screen.</p>
-          </div>
-          <div className="card-img aspect-video overflow-hidden rounded-xl md:w-1/3">
-            <img
-              src="./truck.png"
-              alt="Presence Online"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Card4() {
-  return (
-    <div className="card relative w-full" id="card-4">
-      <div className="card-inner relative w-full bg-gray-900 p-8 text-white">
-        <div className="flex flex-col gap-8 md:flex-row md:gap-16">
-          <div className="card-content flex-grow md:w-2/3">
-            <h1 className="mb-4 text-2xl font-bold">Lasting Impressions</h1>
-            <p>End strong, stay remembered, lead with impact.</p>
-          </div>
-          <div className="card-img aspect-video overflow-hidden rounded-xl md:w-1/3">
-            <img
-              src="./truck.png"
-              alt="Lasting Impressions"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function HomeCard() {
-  //@ts-ignore
-  const container = useRef();
-
-  useGSAP(
-    () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-
-      const cards = gsap.utils.toArray(".card");
-
-      ScrollTrigger.create({
-        //@ts-ignore
-        trigger: cards[0],
-        start: "top 35%",
-        //@ts-ignore
-        endTrigger: cards[cards.length - 1],
-        end: "top 30%",
-        pin: ".intro",
-        pinSpacing: false,
-        markers: true,
-      });
-
-      cards.forEach((card, index) => {
-        const isLastCard = index === cards.length - 1;
-        //@ts-ignore
-        const cardInner = card.querySelector(".card-inner");
-
-        if (!isLastCard) {
-          ScrollTrigger.create({
-            //@ts-ignore
-            trigger: card,
-            start: "top 35%",
-            endTrigger: ".outro",
-            end: "top 65%",
-            pin: true,
-            pinSpacing: false,
-          });
-
-          gsap.to(cardInner, {
-            y: `-${(cards.length - index) * 14}vh`,
-            ease: "none",
-            scrollTrigger: {
-              //@ts-ignore
-              trigger: card,
-              start: "top 35%",
-              endTrigger: ".outro",
-              end: "top 65%",
-              scrub: true,
-            },
-          });
-        }
-      });
-
-      return () => {
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      };
-    },
-    { scope: container },
-  );
-
-  return (
-    //@ts-ignore
-    <div className="overflow-x-hidden" ref={container}>
-      <section className="relative h-[100svh] w-full p-0">
-        <img src="./truck.png" alt="" className="h-full w-full object-cover" />
+    <>
+      {/* Hero Section */}
+      <section className="font-NHD hero relative -mt-18 flex h-[100svh] w-full items-end bg-red-300 p-4 text-white md:p-10">
+        <div className="absolute top-0 left-0 h-full w-full bg-[url(/grid-images/image-16.webp)] bg-cover bg-center"></div>
+        <div className="absolute top-0 left-0 h-full w-full bg-black/20"></div>
+        <Copy isHero>
+          <h1 className="max-w-4xl text-3xl font-bold">
+            Reach Out to Us for Your Next Infrastructure Project
+          </h1>
+        </Copy>
       </section>
 
-      <section className="intro relative flex h-screen w-full items-center bg-gray-100 p-8">
-        <h1 className="max-w-4xl text-3xl font-bold">
-          Creating standout brands for startups that bring joy and leave lasting
-          impressions.
-        </h1>
+      {/* Contact Form Section */}
+      <section className="font-NHD overflow-visible px-4 py-10 md:px-10 md:pb-30">
+        <Copy>
+          <h4 className="text-orange-400">Contact us</h4>
+        </Copy>
+        <Copy>
+          <h1 className="mt-4 w-full md:w-3/4">
+            Get in <span className="text-orange-400">touch.</span>
+          </h1>
+        </Copy>
+
+        <div className="mt-14">
+          <form className="space-y-6 md:w-1/2">
+            <div className="space-y-2">
+              <label htmlFor="name" className="block text-sm font-medium">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="w-full rounded-sm border-0 bg-gray-100 px-4 py-3 text-black"
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="email" className="block text-sm font-medium">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="w-full rounded-sm border-0 bg-gray-100 px-4 py-3 text-black"
+                placeholder="Enter your email address"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="phone" className="block text-sm font-medium">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                className="w-full rounded-sm border-0 bg-gray-100 px-4 py-3 text-black"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="message" className="block text-sm font-medium">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={6}
+                className="w-full rounded-sm border-0 bg-gray-100 px-4 py-3 text-black"
+                placeholder="Tell us about your project"
+              ></textarea>
+            </div>
+
+            <button className="rounded-sm bg-orange-400 px-8 py-3 text-white transition hover:bg-orange-500">
+              Send Message
+            </button>
+          </form>
+
+          {/* Contact Info */}
+          {/* <div className="mt-20 grid gap-10 border-t border-gray-200 pt-10 text-center md:grid-cols-3">
+            <div>
+              <h3 className="text-xl font-medium">Our Office</h3>
+              <p className="mt-4 text-lg text-gray-600">
+                22 Durban Street,
+                <br />
+                Wuse 2, Abuja.
+                <br />
+                Nigeria.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-medium">Contact Information</h3>
+              <p className="mt-4 text-lg text-gray-600">
+                Phone: +234 803 786 9334
+                <br />
+                Phone: +234 703 366 8523
+                <br />
+                Email: info@coan.com
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-medium">Business Hours</h3>
+              <p className="mt-4 text-lg text-gray-600">
+                Monday - Friday: 8:00 AM - 6:00 PM
+                <br />
+                Saturday: 9:00 AM - 1:00 PM
+                <br />
+                Sunday: Closed
+              </p>
+            </div>
+          </div> */}
+        </div>
       </section>
 
-      <section className="cards relative">
-        <Card1 />
-        <Card2 />
-        <Card3 />
-        <Card4 />
+      {/* Map Section */}
+      <section className="font-NHD px-4 md:px-10 md:py-20">
+        {/* <Copy>
+          <h4 className="text-orange-400">Our Location</h4>
+          <h2 className="mt-4 w-full md:w-1/2">
+            Visit our office for a personal consultation
+          </h2>
+        </Copy> */}
+
+        <div className="mt-30 h-[600px] w-full overflow-hidden rounded-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8654697246088!2d7.4777893!3d9.0706397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a5cd8d2c635%3A0x5f76a928c3911a6f!2sDurban%20St%2C%20Wuse%20900288%2C%20Abuja!5e0!3m2!1sen!2sng!4v1687087642345!5m2!1sen!2sng"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div className="my-20 mt-20 md:my-40">
+          <div className="justify-between md:flex">
+            <Copy>
+              <p className="text-xl md:w-1/4">
+                Located in the heart of Abuja, our office is easily accessible
+                and ready to welcome you. Visit us to discuss your
+                infrastructure projects and experience our commitment to
+                engineering excellence firsthand.
+              </p>
+
+              <p className="mt-8 text-xl md:mt-0 md:w-1/4">
+                Strategic base in Abuja's business district, enabling seamless
+                collaboration with partners across West Africa. Our central
+                location reflects our commitment to accessibility and regional
+                excellence.{" "}
+              </p>
+            </Copy>
+          </div>
+        </div>
       </section>
 
-      <section className="outro relative flex h-screen w-full items-center bg-red-300 p-8">
-        <h1 className="max-w-4xl text-3xl font-bold">
-          Creating standout brands for startups that bring joy and leave lasting
-          impressions.
-        </h1>
+      {/* Final Image Section */}
+      <section className="font-NHD relative h-[100svh] w-full">
+        <div className="absolute inset-0 bg-[url(/grid-images/image-13.webp)] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 flex h-full items-center justify-center px-4 text-center text-white md:px-10">
+          <Copy>
+            <h2 className="max-w-3xl">
+              Building Tomorrow's Infrastructure, Today
+            </h2>
+          </Copy>
+        </div>
       </section>
-    </div>
+    </>
   );
-}
+};
+
+export default Contact;
