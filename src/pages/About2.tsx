@@ -29,8 +29,7 @@ const About = () => {
           <h1 className="mt-4 w-full md:w-3/4">
             Engineering <span className="text-orange-400">Excellence,</span>
             <br />
-            Technical Innovation and <br />
-            Integrated Construction{" "}
+            Technical Innovation and Integrated Construction
             <span className="text-orange-400">Solutions.</span>
           </h1>
         </Copy>
