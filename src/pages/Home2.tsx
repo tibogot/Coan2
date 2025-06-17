@@ -163,10 +163,11 @@ const Home = () => {
                   Mechanical Engineering services – Construction of Water supply
                   network, Sewer and Sewage network.
                 </p>
-
-                <Button className="mt-10" variant="withArrow">
-                  Learn more
-                </Button>
+                <a href="/about">
+                  <Button className="mt-10" variant="withArrow">
+                    Learn more
+                  </Button>
+                </a>
               </div>
             </Copy>
           </div>
