@@ -5,7 +5,7 @@ import Copy from "../components/Copy2";
 const Gallery = () => {
   const images = Array.from(
     { length: 12 },
-    (_, i) => `/grid-images/image-${i + 1}.webp`, // Adjust file naming pattern if needed
+    (_, i) => `/grid-images/image-${i + 1}.webp`,
   );
   const previewContainerRef = useRef(null);
   const [isInitialImageLoaded, setIsInitialImageLoaded] = useState(false);
@@ -104,10 +104,9 @@ const Gallery = () => {
           </h1>
         </Copy>
       </section>
-      <div className="font-NHD maincontainer relative -mt-18 flex h-screen w-full flex-col px-4 py-20 md:px-10">
+      <div className="font-NHD maincontainer relative flex w-full flex-col px-4 pt-10 pb-20 md:h-screen md:px-10 md:pt-20">
         {/* Categories Row */}
         <div className="w-full">
-          {/* <h4>About us</h4> */}
           <h1 className="mt-4 w-full md:w-3/4">
             A construction <span className="text-orange-400">company,</span>
             <br />
@@ -121,7 +120,7 @@ const Gallery = () => {
         <div className="my-10 flex h-full w-full flex-row select-none">
           {/* Grid - Left */}
           <div className="gallery flex w-full flex-col lg:w-1/3">
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
               {images.map((src, index) => (
                 <div
                   key={index}
@@ -145,7 +144,7 @@ const Gallery = () => {
           <div className="hidden lg:block lg:w-1/3"></div>
 
           {/* Preview - Right */}
-          <div className="preview mt-8 h-64 w-full lg:mt-0 lg:h-full lg:w-1/3">
+          <div className="preview hidden lg:block lg:h-full lg:w-1/3">
             {!isInitialImageLoaded && (
               <div className="flex h-full w-full items-center justify-center bg-gray-100">
                 <div className="h-8 w-8 animate-spin rounded-full border-2 border-gray-300 border-t-orange-400"></div>
