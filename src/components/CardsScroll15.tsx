@@ -11,26 +11,42 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function Card1() {
   return (
     <div className="card relative w-full" id="card-1">
-      <div className="card-inner relative flex h-[400px] w-full flex-col bg-gray-200 p-4 md:h-[400px] md:flex-row md:p-10">
-        <div className="left mb-4 flex w-full flex-col justify-between md:mb-0 md:w-3/4">
-          <Copy>
-            <h6 className="text-lg md:text-base">Planning</h6>
-          </Copy>
-          <div className="p">
-            <Copy>
-              <p className="w-full text-lg md:w-1/3 md:text-xl">
-                Creating an ordered timeline of events, staffing the project and
-                determining the necessary materials and equipments.
-              </p>
-            </Copy>
+      <div className="card-inner h-[500px] w-full overflow-hidden bg-gray-200 p-6 text-black md:h-[400px] md:p-10">
+        <div className="flex h-full flex-col md:flex-row">
+          {/* LEFT */}
+          <div className="flex h-full w-full flex-col md:w-3/4 md:pr-6">
+            {/* Text */}
+            <div>
+              <Copy>
+                <h6 className="text-lg md:text-base">Planning</h6>
+              </Copy>
+
+              <div className="mt-12" />
+
+              <Copy>
+                <p className="text-lg md:w-2/3 md:text-xl">
+                  Creating an ordered timeline of events, staffing the project
+                  and determining the necessary materials and equipments.
+                </p>
+              </Copy>
+            </div>
+
+            {/* Mobile Image */}
+            <div className="mt-6 flex-grow overflow-hidden rounded-sm md:hidden">
+              <img
+                src="plan.webp"
+                alt="Planning visual"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
-        </div>
-        <div className="right flex h-32 w-full bg-amber-200 md:h-auto md:w-1/4">
-          <div className="img-wrap h-full w-full rounded-sm">
+
+          {/* Desktop Image */}
+          <div className="hidden h-full w-full overflow-hidden rounded-sm md:flex md:w-1/4">
             <img
               src="plan.webp"
               alt="Planning visual"
-              className="h-full w-full rounded-sm object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
@@ -42,26 +58,42 @@ function Card1() {
 function Card2() {
   return (
     <div className="card relative w-full" id="card-2">
-      <div className="card-inner relative flex h-[400px] w-full flex-col bg-black p-4 text-white md:h-[400px] md:flex-row md:p-10">
-        <div className="left mb-4 flex w-full flex-col justify-between md:mb-0 md:w-3/4">
-          <Copy>
-            <h6 className="text-lg md:text-base">Design</h6>
-          </Copy>
-          <div className="p">
-            <Copy>
-              <p className="w-full text-lg md:w-1/3 md:text-xl">
-                We work hard to develop innovative and cost-effective solutions
-                for our client both public and private.
-              </p>
-            </Copy>
+      <div className="card-inner h-[500px] w-full overflow-hidden bg-black p-6 text-white md:h-[400px] md:p-10">
+        <div className="flex h-full flex-col md:flex-row">
+          {/* LEFT */}
+          <div className="flex h-full w-full flex-col md:w-3/4 md:pr-6">
+            {/* Text */}
+            <div>
+              <Copy>
+                <h6 className="text-lg md:text-base">Design</h6>
+              </Copy>
+
+              <div className="mt-12" />
+
+              <Copy>
+                <p className="text-lg md:w-2/3 md:text-xl">
+                  We work hard to develop innovative and cost-effective
+                  solutions for our client both public and private.
+                </p>
+              </Copy>
+            </div>
+
+            {/* Mobile Image */}
+            <div className="mt-6 flex-grow overflow-hidden rounded-sm md:hidden">
+              <img
+                src="design.webp"
+                alt="Design visual"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
-        </div>
-        <div className="right flex h-32 w-full md:h-auto md:w-1/4">
-          <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
+
+          {/* Desktop Image */}
+          <div className="hidden h-full w-full overflow-hidden rounded-sm md:flex md:w-1/4">
             <img
               src="design.webp"
-              alt="Planning visual"
-              className="h-full w-full rounded-sm object-cover"
+              alt="Design visual"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
@@ -73,27 +105,44 @@ function Card2() {
 function Card3() {
   return (
     <div className="card relative w-full" id="card-3">
-      <div className="card-inner relative flex h-[400px] w-full flex-col bg-orange-400 p-4 text-white md:h-[400px] md:flex-row md:p-10">
-        <div className="left mb-4 flex w-full flex-col justify-between md:mb-0 md:w-3/4">
-          <Copy>
-            <h2 className="text-xl md:text-2xl">Operation</h2>
-          </Copy>
-          <div className="p">
-            <Copy>
-              <p className="w-full text-lg md:w-1/3 md:text-xl">
-                We emphasize on a broad spectrum of services, competences,
-                processes and tools to assure the built environment will perform
-                the functions for which a facility was designed and constructed.
-              </p>
-            </Copy>
+      <div className="card-inner h-[500px] w-full overflow-hidden bg-orange-400 p-6 text-white md:h-[400px] md:p-10">
+        <div className="flex h-full flex-col md:flex-row">
+          {/* LEFT: Text and Mobile Image */}
+          <div className="flex h-full w-full flex-col md:w-3/4 md:pr-6">
+            {/* Text section */}
+            <div>
+              <Copy>
+                <h6 className="text-lg md:text-base">Operation</h6>
+              </Copy>
+
+              <div className="mt-12" />
+
+              <Copy>
+                <p className="text-lg md:w-2/3 md:text-xl">
+                  We emphasize on a broad spectrum of services, competences,
+                  processes and tools to assure the built environment will
+                  perform the functions for which a facility was designed and
+                  constructed.
+                </p>
+              </Copy>
+            </div>
+
+            {/* Image fills remaining height ONLY on mobile */}
+            <div className="mt-6 flex-grow overflow-hidden rounded-sm md:hidden">
+              <img
+                src="operation.webp"
+                alt="Operation visual"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
-        </div>
-        <div className="right flex h-32 w-full md:h-auto md:w-1/4">
-          <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
+
+          {/* RIGHT: Desktop Image only */}
+          <div className="right hidden h-full w-full overflow-hidden rounded-sm md:flex md:w-1/4">
             <img
               src="operation.webp"
-              alt="Planning visual"
-              className="h-full w-full rounded-sm object-cover"
+              alt="Operation visual"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
@@ -105,26 +154,42 @@ function Card3() {
 function Card4() {
   return (
     <div className="card relative w-full" id="card-4">
-      <div className="card-inner relative flex h-[400px] w-full flex-col bg-orange-500 p-4 text-white md:h-[400px] md:flex-row md:p-10">
-        <div className="left mb-4 flex w-full flex-col justify-between md:mb-0 md:w-3/4">
-          <Copy>
-            <h2 className="text-xl md:text-2xl">Construction</h2>
-          </Copy>
-          <div className="p">
-            <Copy>
-              <p className="w-full text-lg md:w-1/3 md:text-xl">
-                Innovative execution methods to deliver safe, high quality
-                project is the foundation of our business and success.
-              </p>
-            </Copy>
+      <div className="card-inner h-[500px] w-full overflow-hidden bg-orange-500 p-6 text-white md:h-[400px] md:p-10">
+        <div className="flex h-full flex-col md:flex-row">
+          {/* LEFT */}
+          <div className="flex h-full w-full flex-col md:w-3/4 md:pr-6">
+            {/* Text */}
+            <div>
+              <Copy>
+                <h6 className="text-lg md:text-base">Construction</h6>
+              </Copy>
+
+              <div className="mt-12" />
+
+              <Copy>
+                <p className="text-lg md:w-2/3 md:text-xl">
+                  Innovative execution methods to deliver safe, high quality
+                  project is the foundation of our business and success.
+                </p>
+              </Copy>
+            </div>
+
+            {/* Mobile Image */}
+            <div className="mt-6 flex-grow overflow-hidden rounded-sm md:hidden">
+              <img
+                src="construction.webp"
+                alt="Construction visual"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
-        </div>
-        <div className="right flex h-32 w-full md:h-auto md:w-1/4">
-          <div className="img-wrap h-full w-full rounded-sm bg-amber-200">
+
+          {/* Desktop Image */}
+          <div className="hidden h-full w-full overflow-hidden rounded-sm md:flex md:w-1/4">
             <img
               src="construction.webp"
-              alt="Planning visual"
-              className="h-full w-full rounded-sm object-cover"
+              alt="Construction visual"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
@@ -291,7 +356,7 @@ export default function HomeCard() {
         </div>
       </section>
 
-      <section className="cards relative space-y-0 md:space-y-0">
+      <section className="cards relative space-y-4 md:space-y-0">
         <Card1 />
         <Card2 />
         <Card3 />
